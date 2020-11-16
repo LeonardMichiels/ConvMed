@@ -23,6 +23,7 @@ img {
 
 section {
   height: 100vh;
+  width:100vw;
 }
 #sect_1 {
   .img_cont {
@@ -78,3 +79,37 @@ section {
   66% { background-color: blue}
   100% { background-color: cyan}
 }
+
+.section {
+    color: white;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 120%;
+    font-weight: 800;
+    position: relative;
+  }
+ 
+  
+  #section1 {
+    background: #ff3c38;
+  }
+  
+  #section2 {
+    background: #ff8c42;
+  }
+  
+  #section3 {
+    background: #6699cc;
+  }
+  
+  #section4 {
+    background: #00b9ae;
+  }
+
+
+  ::-webkit-scrollbar {
+    display: none;
+    }
