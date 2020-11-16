@@ -3,7 +3,7 @@
 // ==================================smooth-scroll-start==================================
  
 (function($) {
-    var selector = ".section";
+    var selector = "section";
   
     var $slides = $(selector);
   
