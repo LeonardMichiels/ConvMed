@@ -1,1 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  position: relative;
+}
+body h1, body h2 {
+  margin-top: 0;
+}
 
+img {
+  width: 100%;
+}
+
+section {
+  height: 100vh;
+}
+
+#sect_1 {
+  background-color: red;
+}
+#sect_1 .img_cont {
+  position: fixed;
+  width: 200px;
+  right: 0;
+  animation: slideLeft calc(1s / (var(--nvh) - 1)) linear 1 alternate paused forwards;
+  animation-delay: calc(var(--scroll) * -1s + ((1 - 1 ) * (1s / (var(--nvh) - 1))));
+}
+
+#sect_2 {
+  background-color: blue;
+}
+#sect_2 .img_cont {
+  width: 200px;
+  position: fixed;
+  top: 50vh;
+  animation: slideRight calc(1s / (var(--nvh) - 1)) linear 1 alternate paused forwards;
+  animation-delay: calc(var(--scroll) * -1s + ((2 - 1 ) * (1s / (var(--nvh) - 1))));
+}
+
+#sect_3 {
+  background-color: red;
+}
+
+#sect_4 {
+  background-color: blue;
+}
+
+@keyframes slideLeft {
+  to {
+    transform: translate(-1000px);
+  }
+}
+@keyframes slideRight {
+  to {
+    transform: translate(1000px);
+  }
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,68 @@
+$duration: calc(1s / (var(--nvh) - 1));
+@mixin animation-delay($sect_n) {
+  animation-delay: calc(var(--scroll) * -1s + ((#{$sect_n} - 1 ) * (1s / (var(--nvh) - 1))));
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  position: relative;
+
+  h1, h2 {
+    margin-top: 0;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+section {
+  height: 100vh;
+}
+#sect_1 {
+  background-color: red;
+  .img_cont {
+    position: fixed;
+    width: 200px;
+    right: 0;
+  
+    animation: slideLeft $duration linear 1 alternate paused forwards;
+    @include animation-delay(1);
+  }
+}
+#sect_2 {
+  background-color: blue;
+  .img_cont {
+    width: 200px;
+    position: fixed;
+    top: 50vh;
+
+    animation: slideRight $duration linear 1 alternate paused forwards;
+    @include animation-delay(2);
+  }
+}
+#sect_3 {
+  background-color: red;
+}
+#sect_4 {
+  background-color: blue;
+}
+
+@keyframes slideLeft {
+  to {
+    transform: translate(-1000px);
+  }
+}
+@keyframes slideRight {
+  to {
+    transform: translate(1000px);
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
