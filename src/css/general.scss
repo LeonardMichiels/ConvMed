@@ -49,10 +49,6 @@ section {
     @include animation-delay(2);
   }
 }
-#sect_3 {
-}
-#sect_4 {
-}
 
 @keyframes slideThenFade {
   0% {
@@ -90,4 +86,8 @@ section {
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+#flou {
+    filter: blur(1.5 rem);
 }
