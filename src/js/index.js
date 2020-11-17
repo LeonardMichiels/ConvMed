@@ -76,7 +76,7 @@
   // ==================================smooth-scroll-end==================================
 //nav-start
 // Get the container element
-var btnContainer = document.getElementById("navbar");
+/* var btnContainer = document.querySelector("#navbar ul");
 
 // Get all buttons with class="btn" inside the container
 var btns = btnContainer.getElementsByClassName("btn");
@@ -93,4 +93,4 @@ for (var i = 0; i < btns.length; i++) {
 
 $(".btn").click(function () {
   $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 400);
-});
+}); */

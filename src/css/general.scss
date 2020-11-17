@@ -299,30 +299,13 @@ section {
   align-items: flex-end;
   justify-content: center;
   position: fixed;
-  right: 30px;
+  right: 10px;
   height: 100vh;
 
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-
-    li {
-      a {
-        height: 10vh;
-        color: #353536;
-    
-        padding: 8px 22px;
-        text-decoration: none;
-      }
-      img {
-        max-height: 10vh;
-      }
-    
-      .active {
-        color: #353536;
-        filter: (invert(100%));
-      }
+  span {
+    img {
+      height: 7vh;
+      width: 7vh;
     }
   }
 }
