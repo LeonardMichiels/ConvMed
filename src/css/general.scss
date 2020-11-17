@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 body{
     margin:0;
     background: white;      
@@ -20,7 +19,6 @@ body{
   
   #section1 {
     background: #ff3c37;
-=======
 $duration: calc(2s / (var(--nvh) - 1));
 @mixin animation-delay($sect_n) {
   animation-delay: calc(var(--scroll) * -1s + ((#{$sect_n} - 1) * (1s / (var(--nvh) - 1))));
@@ -80,7 +78,6 @@ section {
 @keyframes slideThenFade {
   0% {
     opacity: 0;
->>>>>>> 3a40763067655448a4db131634b972b161b09787
   }
   50% {
     transform: translate(var(--translate));
@@ -112,13 +109,6 @@ section {
   }
 }
 
-<<<<<<< HEAD
-  ::-webkit-scrollbar {
-    display: none;
-    }
-
-=======
 ::-webkit-scrollbar {
   display: none;
 }
->>>>>>> 3a40763067655448a4db131634b972b161b09787
