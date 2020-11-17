@@ -178,7 +178,7 @@ section {
   .img_cont.b {
     margin-top: 1000px;
     --translate: 1000px;
-    animation: slideThenFade $duration linear 1 alternate paused forwards;
+    animation: slideThenFade $duration2 linear 1 alternate paused forwards;
     @include animation-delay(2);
   }
 }
