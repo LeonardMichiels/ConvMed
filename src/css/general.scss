@@ -15,7 +15,7 @@ body {
   padding: 0;
   top: 0;
   position: relative;
-  background-color: tomato;
+  background-color: white;
   animation: bg-color 1s linear 1 alternate paused forwards;
   animation-delay: calc(var(--scroll) * -1s);
   font-family: "Inter", sans-serif;
@@ -24,17 +24,18 @@ body {
   h1,
   h2 {
     margin-top: 0;
+    font-weight: 800;
+    font-size: 6em;
   }
 }
 
 img {
   width: 100%;
 }
-audio{
-  z-index: 200;
-}
+
 section {
   height: 100vh;
+  width: 95vw;
 }
 #home_1 .container {
   position: fixed;
@@ -180,12 +181,27 @@ section {
   .img_cont.b {
     margin-top: 1000px;
     --translate: 1000px;
-    animation: slideThenFade $duration2 linear 1 alternate paused forwards;
-    @include animation-delay(2);
+    animation: fadeSlideVertThenFadeSlide $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim3);
   }
 }
 
 @keyframes slideThenFade {
+  50% {
+    transform: translate(var(--translate));
+    opacity: 1;
+  }
+  99% {
+    transform: translate(var(--translate));
+    opacity: 0;
+  }
+  100% {
+    transform: translate(var(--translate));
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes fadeSlideThenFade {
   0% {
     opacity: 0;
   }
@@ -256,13 +272,16 @@ section {
 
 @keyframes bg-color {
   0% {
-    background-color: tomato;
+    background-color: white;
   }
-  33% {
-    background-color: purple;
+  1% {
+    background-color: orange;
   }
-  66% {
-    background-color: blue;
+  14% {
+    background-color: orange;
+  }
+  28% {
+    background-color: orange;
   }
   100% {
     background-color: cyan;
@@ -380,3 +399,7 @@ $root: '.c-rainbow';
   transform: translatey(calc(var(--axis-y) * -1));
  }
 } 
+
+
+//shake
+
