@@ -30,7 +30,9 @@ body {
 img {
   width: 100%;
 }
-
+audio{
+  z-index: 200;
+}
 section {
   height: 100vh;
 }
@@ -289,10 +291,10 @@ section {
     }
   }
 }
-iframe{
+/* iframe{
   z-index: 300;
   position: relative;
-}
+} */
 
 
 
@@ -323,8 +325,8 @@ $root: '.c-rainbow';
 
 #{$root} {
  counter-reset: rainbow;
- position: relative;
- display: block;
+  position: relative;
+  display: block;
  
  list-style: none;
  
