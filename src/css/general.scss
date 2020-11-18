@@ -500,7 +500,7 @@ section {
 iframe {
   z-index: 300;
   position: relative;
-} 
+}
 
 $root: ".c-rainbow";
 
@@ -534,21 +534,11 @@ $root: ".c-rainbow";
   padding: 0;
   margin: 0;
 
-#{$root} {
- counter-reset: rainbow;
-  position: relative;
-  display: block;
- 
- list-style: none;
- 
- padding: 0;
- margin: 0;
- 
- &__layer {
-  --text-color: var(--color-foreground);
-  counter-increment: rainbow; 
-  font-size: 10vw;
-  color: var(--text-color);
+  &__layer {
+    --text-color: var(--color-foreground);
+    counter-increment: rainbow;
+    font-size: 10vw;
+    color: var(--text-color);
 
     text-shadow: -1px -1px 0 var(--color-black), 1px -1px 0 var(--color-black), -1px 1px 0 var(--color-black),
       1px 1px 0 var(--color-black), 4px 4px 0 rgba(0, 0, 0, 0.2);
@@ -600,5 +590,4 @@ $root: ".c-rainbow";
   50% {
     transform: translatey(calc(var(--axis-y) * -1));
   }
-}
 }
