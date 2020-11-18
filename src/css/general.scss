@@ -51,6 +51,11 @@ body {
   }
 }
 
+.active {
+  color: #353536;
+  filter: invert(100%)
+}
+
 img {
   width: 100%;
 }
