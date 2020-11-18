@@ -274,7 +274,6 @@ section {
   100% {
     transform: translate(var(--translate));
     opacity: 0;
-    display: none;
   }
 }
 @keyframes fadeSlideThenFade {
@@ -292,7 +291,6 @@ section {
   100% {
     transform: translate(var(--translate));
     opacity: 0;
-    display: none;
   }
 }
 @keyframes fadeSlideThenFadeSlide {
@@ -303,12 +301,9 @@ section {
     transform: translate(0);
     opacity: 1;
   }
-  99% {
+  100% {
     transform: translate(var(--translate));
     opacity: 0;
-  }
-  100% {
-    display: none;
   }
 }
 @keyframes fadeSlideVertThenFadeSlide {
@@ -319,12 +314,9 @@ section {
     margin-bottom: var(--translate);
     opacity: 1;
   }
-  99% {
+  100% {
     margin-bottom: calc(var(--translate) * 2);
     opacity: 0;
-  }
-  100% {
-    display: none;
   }
 }
 @keyframes fadeSlideVertThenFade {
@@ -335,12 +327,9 @@ section {
     margin-bottom: var(--translate);
     opacity: 1;
   }
-  99% {
+  100% {
     margin-bottom: var(--translate);
     opacity: 0;
-  }
-  100% {
-    display: none;
   }
 }
 @keyframes zoomThrough {
@@ -353,7 +342,6 @@ section {
   }
   100% {
     opacity: 0;
-    display: none;
   }
 }
 @keyframes fadeOut {
@@ -362,7 +350,6 @@ section {
   }
   100% {
     opacity: 0;
-    display: none;
   }
 }
 @keyframes fadeInThenOut {
@@ -374,17 +361,13 @@ section {
   }
   100% {
     opacity: 0;
-    display: none;
   }
 }
 @keyframes displaysOnYourTurn {
   0% {
     visibility: hidden;
   }
-  1% {
-    visibility: visible;
-  }
-  99% {
+  50% {
     visibility: visible;
   }
   100% {
