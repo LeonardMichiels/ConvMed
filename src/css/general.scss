@@ -262,6 +262,29 @@ section {
   }
 }
 
+#wow_1 .container {
+  @include section_cont($anim7);
+  h2 {
+    opacity: 0;
+    position: absolute;
+    left: -30vw;
+    top: 7vh;
+    --translate: 35vw;
+    animation: fadeSlideThenFade $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim7);
+  }
+  p {
+    opacity: 0;
+    position: absolute;
+    width: 80vw;
+    right: 10vw;
+    bottom: -10vh;
+    --translate: 30vh;
+    animation: fadeSlideVertThenFade $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim7);
+  }
+}
+
 @keyframes slideThenFade {
   50% {
     transform: translate(var(--translate));
@@ -367,8 +390,13 @@ section {
   0% {
     visibility: hidden;
   }
-  50% {
+  40% {
     visibility: visible;
+    z-index: 3;
+  }
+  70% {
+    visibility: visible;
+    z-index: 3;
   }
   100% {
     visibility: hidden;
