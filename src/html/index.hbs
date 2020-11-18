@@ -13,15 +13,29 @@
     <div id="navbar">
         <span><a class="btn active" href="#affraid_1" data-slide-n="1"><img src="/img/nav/affraid.svg"></a></span>
         <span><a class="btn" href="#wow_1" data-slide-n="7"><img src="/img/nav/wow.svg"></a></span>
-        <span><a class="btn" href="#bored_1"><img src="/img/nav/bored.svg"></a></span>
-        <span><a class="btn" href="#happy_1"><img src="/img/nav/happy.svg"></a></span>
-        <span><a class="btn" href="#love_1"><img src="/img/nav/love.svg"></a></span>
-        <span><a class="btn" href="#grumpy_1"><img src="/img/nav/grumpy.svg"></a></span>
-        <span><a class="btn" href="#cry_1"><img src="/img/nav/cry.svg"></a></span>
-        <span><a class="btn" href="#ahego_1"><img src="/img/nav/ahego.svg"></a></span>
+        <span><a class="btn" href="#bored_1" data-slide-n="11"><img src="/img/nav/bored.svg"></a></span>
+        <span><a class="btn" href="#happy_1" data-slide-n="19"><img src="/img/nav/happy.svg"></a></span>
+        <span><a class="btn" href="#love_1" data-slide-n="23"><img src="/img/nav/love.svg"></a></span>
+        <span><a class="btn" href="#grumpy_1" data-slide-n="26"><img src="/img/nav/grumpy.svg"></a></span>
+        <span><a class="btn" href="#cry_1" data-slide-n="33"><img src="/img/nav/cry.svg"></a></span>
+        <span><a class="btn" href="#want_1" data-slide-n="36"><img src="/img/nav/ahego.svg"></a></span>
     </div>
 
-    <section id="home_1">
+    {{!-- 
+    
+        1       accueil
+        2-7     peur
+        8-11    surprise
+        12-19   ennui
+        20-23   happy
+        24-26   love
+        27-33   colère
+        34-36   tristesse
+        37-39   envie
+    
+     --}}
+
+    <section id="home_1" class="home">
         <div class="container">
             <div class="title_cont">
                 <div class="volets">
@@ -36,7 +50,8 @@
             </div>
         </div>
     </section>
-    <section id="affraid_1">
+
+    <section id="affraid_1" class="affraid">
         <div class="container">
             <div class="scaredtitle">
                 <h2 class="shake">PEUR</h2>
@@ -51,7 +66,7 @@
             </div>
         </div>
     </section>
-    <section id="affraid_2">
+    <section id="affraid_2" class="affraid">
         <div class="container">
             <div class="scaredtitle">
                 <h2 class="shake">Que se passe-t-il?</h2>
@@ -67,7 +82,7 @@
             </div>
         </div>
     </section>
-    <section id="affraid_3">
+    <section id="affraid_3" class="affraid">
         <div class="container">
             <div class="img_cont a">
                 <img class="shake shadow" src="/img/mich/mich1.jpg" alt="">
@@ -80,7 +95,7 @@
             </div>
         </div>
     </section>
-    <section id="affraid_4">
+    <section id="affraid_4" class="affraid">
         <div class="container">
             <div class="img_cont a">
                 <img class="shake shadow" src="/img/mich/mich4.jpg" alt="">
@@ -90,7 +105,7 @@
             </div>
         </div>
     </section>
-    <section id="affraid_5">
+    <section id="affraid_5" class="affraid">
         <div class="container">
             <div class="a">
                 <p class="shake">“Au début de la pandémie, la HEIG-VD a stoppé les cours en présentiel donc j'étais
@@ -117,7 +132,7 @@
             </div>
         </div>
     </section>
-    <section id="affraid_6">
+    <section id="affraid_6" class="affraid">
         <div class="container">
             <div class="scaredtitle">
                 <h2 class="shake">Podcast</h2>
@@ -129,7 +144,7 @@
         </div>
     </section>
 
-    <section id="wow_1">
+    <section id="wow_1" class="wow">
         <div class="container">
             <div class="h2">
                 <h2 class="pop">SURPRISE</h2>
@@ -142,83 +157,667 @@
             </div>
         </div>
     </section>
-    <section id="wow_2">
+    <section id="wow_2" class="wow">
+        <div class="container">
+            <div class="h3">
+                <h3 class="a shake">NOUVELLE PASSION</h3>
+            </div>
+            <div class="h3">
+                <h3 class="b shake">NOUVEAU PASSE-TEMPS</h3>
+            </div>
+            <div class="h3">
+                <h3 class="c shake">NOUVELLES ACTIVITÉS</h3>
+            </div>
+        </div>
+    </section>
+    <section id="wow_3" class="wow">
+        <div class="container">
+            <div class="p">
+                <p class="a shake">Par exemple, certain.e.s ont pu s’essayer à la pâtisserie ou à la cuisine.</p>
+            </div>
+            <div class="p">
+                <p class="b shake">Le frigo est plein pour certain.e.s prévoyant.e.s : les repas ont été définis.</p>
+            </div>
+            <div class="p">
+                <p class="c shake">Pour les autres, c’est l’improvisation. Nous avons pu être étonné.e de nous découvrir
+                    des
+                    capacités.</p>
+            </div>
+        </div>
+    </section>
+    <section id="wow_4" class="wow">
+        <div class="container">
+            <iframe src="https://drive.google.com/file/d/100LqHHShN3kj4SoTzRKvxWOYDNSqsYqU/preview"></iframe>
+        </div>
+    </section>
+
+    <section id="bored_1" class="bored">
+        <div class="container">
+            <div class="h2">
+                <h2 class="shake">ENNUI</h2>
+            </div>
+            <div class="right">
+                <div class="h3">
+                    <h3 class="shake">Ça y est, je m’ennuie</h3>
+                </div>
+                <div class="p">
+                    <p class="shake poem">Je traîne, je vacille<br>
+                        Je pense et ratiocine<br>
+                        Depuis quand sommes-nous hier ?<br>
+                        Je crois que le temps décélèrer</p>
+                </div>
+                <div class="p">
+                    <p class="shake poem">Si patience est mère de sûreté<br>
+                        Confinement est celle de vacuité<br>
+                        Le rythme effréné de ce dystopique maintenant<br>
+                        Me fait valser dans le néant</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="bored_2" class="bored">
+        <div class="container">
+            <div class="left">
+                <div class="p">
+                    <p class="shake poem">Plus rien ne m’intéresse<br>
+                        Les séries Netflix je délaisse<br>
+                        Mes objectifs sportifs j’’abandonne<br>
+                        Et à la paresse je m’adonne<br>
+                    </p>
+                </div>
+                <div class="p">
+                    <p class="shake poem"> Ça y est, je suffoque !<br>
+                        Ma sentence est sans équivoque<br>
+                        Lorsque l’air vient à me manquer<br>
+                        J’ouvre un livre pour m’alimenter<br>
+                    </p>
+                </div>
+                <div class="p">
+                    <p class="shake poem">Ça y est, je capitule !<br>
+                        Tout est Ersatz de divertissement<br>
+                        Ma chambre un accélérateur de particule<br>
+                        Ayant créé en moi un trou béant<br>
+                    </p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="img">
+                    <img class="shake" src="/img/ennui/ennui_1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="bored_3" class="bored">
+        <div class="container">
+            <div class="left">
+                <div class="img">
+                    <img class="shake" src="/img/ennui/ennui_2.png" alt="">
+                </div>
+            </div>
+            <div class="right">
+                <div class="p">
+                    <p class="shake poem">Ça y est, s’en est assez !<br>
+                        Est-il possible de mourir d’oisiveté ?<br>
+                        Cérébralement je tourne en rond<br>
+                        Serais-je destinée à finir comme Néron ?<br>
+                    </p>
+                </div>
+                <div class="p">
+                    <p class="shake poem">
+                        Mon cœur est apathique<br>
+                        Mon existence est dramatique<br>
+                        Être assujetti à l’emmerdement<br>
+                        Ce n’était pas le plan pour mes 25 ans<br>
+                    </p>
+                </div>
+                <div class="p">
+                    <p class="shake poem">
+                        Je m’en sortirais probablement<br>
+                        Même si elle est lente, même si elle me nui<br>
+                        Mais je ne peux faire autrement<br>
+                        Car ennuie m’a séduit<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="bored_4" class="bored">
+        <div class="container">
+            <div class="h2">
+                <h2 class="shake">Podcast</h2>
+            </div>
+            <div class="audio">
+                <audio controls="controls">
+                    <source src="https://docs.google.com/uc?export=download&id=1rdEDUX9nxb4j6rMuUdxBf_z1gL_kfhBS">
+                </audio>
+            </div>
+        </div>
+    </section>
+    <section id="bored_5" class="bored">
+        <div class="container">
+            <div class="h2">
+                <h2 class="shake">Une vie en freeze</h2>
+            </div>
+            <div class="p">
+                <p class="shake">
+                    Dans la fleur de l'âge, où nous étions censé·e·s découvrir le monde et <span
+                        class="big_txt">vivre</span> nos 20 ans, nous avons
+                    été interrompu·e·s et <span class="big_txt">enfermé·e·s</span> dans nos maisons.<br><br>
+                    Ce blocage total nous a conduit à l'ennui...
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="bored_6" class="bored">
+        <div class="container">
+            <div class="p">
+                <p class="shake">
+                    Dans le monde <span class="big_txt">trépidant</span> dans lequel nous avons vécu, il n'y avait pas
+                    beaucoup de temps pour <span class="big_txt">penser</span>,
+                    nous nous sommes plongé·e·s pleinement dans nos vies sans trop réfléchir.
+                </p>
+            </div>
+            <div class="p">
+                <p class="shake">
+                    Cette frénésie nous a toutefois empêchés de faire <span class="big_txt">ressortir</span> des aspects
+                    très importants de nous-mêmes, qui sont restés cachés.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="bored_7" class="bored">
+        <div class="container">
+            <div class="p">
+                <p class="shake">
+                    Avec une grande <span class="big_txt">introspection</span>, certain·e·s d'entre nous ont trouvé des
+                    <span class="big_txt">réponses</span>, une conscience accrue.
+                </p>
+            </div>
+            <div class="p">
+                <p class="shake">
+                    D'autres se sont concentré·e·s sur les autres, rattrapant le temps perdu, souvent avec des mots
+                    vraiment simples comme&nbsp;:
+                </p>
+            </div>
+            <div class="span a"><span class="big_txt shake">"comment vas-tu ?"</span></div>
+            <div class="span b"><span class="big_txt shake">"je t'aime bien"</span></div>
+        </div>
+    </section>
+    <section id="bored_8" class="bored">
+        <div class="container">
+            <iframe src="https://drive.google.com/file/d/100LqHHShN3kj4SoTzRKvxWOYDNSqsYqU/preview"></iframe>
+        </div>
+    </section>
+
+    <section id="happy_1" class="happy">
+        <div class="container">
+            <div class="h2">
+                <h2 class="shake">
+                    <ul class="c-rainbow">
+                        <li class="c-rainbow__layer c-rainbow__layer--white">HAPPY !</li>
+                        <li class="c-rainbow__layer c-rainbow__layer--orange">HAPPY !</li>
+                        <li class="c-rainbow__layer c-rainbow__layer--red">HAPPY !</li>
+                        <li class="c-rainbow__layer c-rainbow__layer--violet">HAPPY !</li>
+                        <li class="c-rainbow__layer c-rainbow__layer--blue">HAPPY !</li>
+                        <li class="c-rainbow__layer c-rainbow__layer--green">HAPPY !</li>
+                        <li class="c-rainbow__layer c-rainbow__layer--yellow">HAPPY !</li>
+                    </ul>
+                </h2>
+            </div>
+            <div class="h3">
+                <h3 class="shake">
+                    <ul class="c-rainbow">
+                        <li class="c-rainbow__layer c-rainbow__layer--white">Podcast</li>
+                        <li class="c-rainbow__layer c-rainbow__layer--orange">Podcast</li>
+                        <li class="c-rainbow__layer c-rainbow__layer--red">Podcast</li>
+                        <li class="c-rainbow__layer c-rainbow__layer--violet">Podcast</li>
+                        <li class="c-rainbow__layer c-rainbow__layer--blue">Podcast</li>
+                        <li class="c-rainbow__layer c-rainbow__layer--green">Podcast</li>
+                        <li class="c-rainbow__layer c-rainbow__layer--yellow">Podcast</li>
+                    </ul>
+                </h3>
+            </div>
+            <div class="audio">
+                <audio controls="controls">
+                    <source src="https://docs.google.com/uc?export=download&id=1rdEDUX9nxb4j6rMuUdxBf_z1gL_kfhBS">
+                </audio>
+            </div>
+        </div>
+    </section>
+    <section id="happy_2" class="happy">
         <div class="container">
             <div class="h3"><h3 class="a pop">NOUVELLE PASSION</h3></div>
             <div class="h3"><h3 class="b pop">NOUVEAU PASSE-TEMPS</h3></div>
             <div class="h3"><h3 class="c pop">NOUVELLES ACTIVITÉS</h3></div>
         </div>
     </section>
-    <section id="wow_3">
+    <section id="happy_3" class="happy">
         <div class="container">
             <div class="p"><p class="a pop">Par exemple, certains ont pu s’essayer à la pâtisserie ou à la cuisine.</p></div>
             <div class="p"><p class="b pop">Le frigo est plein pour certains prévoyants : les repas ont été définis.</p></div>
             <div class="p"><p class="c pop">Pour les autres, c’est l’improvisation. Nous avons pu être étonné de nous découvrir des
                 capacités.</p></div>
+            <div class="h2">
+                <h2 class="shake">
+                    <ul class="c-rainbow">
+                        <li class="c-rainbow__layer c-rainbow__layer--yellow">Avec Toi</li>
+                        <li class="c-rainbow__layer c-rainbow__layer--orange">Avec Toi</li>
+                        <li class="c-rainbow__layer c-rainbow__layer--red">Avec Toi</li>
+                        <li class="c-rainbow__layer c-rainbow__layer--violet">Avec Toi</li>
+                        <li class="c-rainbow__layer c-rainbow__layer--blue">Avec Toi</li>
+                        <li class="c-rainbow__layer c-rainbow__layer--green">Avec Toi</li>
+                        <li class="c-rainbow__layer c-rainbow__layer--yellow">Avec Toi</li>
+                    </ul>
+                </h2>
+            </div>
+            <div class="flex">
+                <div class="left">
+                    <div class="p">
+                        <p class="shake haiku">J’ai arrêté de chercher un endroit où je suis bien ;<br>
+                            Parce que je me suis rendu.e compte, que je peux être heureux.euse partout ;<br>
+                            Il suffit de mettre les bonnes lunettes, comme disent les anciens ;<br>
+                            Pour ne plus voir le monde de façon floue ;<br>
+                        </p>
+                    </div>
+                    <div class="p">
+                        <p class="shake haiku">Parfois, bêtement, je me suis arrêté.e pour te regarder passer ;<br>
+                            Je suis désolée de t’avoir fait sombrer ainsi ;<br>
+                            Jamais cela n’aurait dû t’être destiné ;<br>
+                            J’aurais dû avoir une pensée plus réfléchie ;<br>
+                        </p>
+                    </div>
+                    <div class="p">
+                        <p class="shake haiku">Au début du confinement tu étais bel et bien présent ;<br>
+                            Sans vraiment que je m’en rende compte ;<br>
+                        </p>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="img">
+                        <img class="shake" src="/img/joie/joie_1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="happy_4" class="happy">
+        <div class="container">
+            <div class="left">
+                <div class="img">
+                    <img class="shake" src="/img/joie/joie_2.png" alt="">
+                </div>
+            </div>
+            <div class="right">
+                <div class="p">
+                    <p class="shake haiku">Caché, tu me faisais voir la vie différemment,passé des bons moments ;<br>
+                        Tu me tendais la main, alors que je te laissais-pour-compte ;<br>
+                    </p>
+                </div>
+                <div class="p">
+                    <p class="shake haiku">Je ne te cherchais plus, mais tu m’as trouvé ;<br>
+                        Tu m’es apparu comme une évidence ;<br>
+                        Et je n’ai pas pu m’empêcher de te regarder ;<br>
+                        De suite, tu étais partout à la foi : déguisée sous certaines apparences ;<br>
+                    </p>
+                </div>
+                <div class="p">
+                    <p class="shake haiku">Mars, avril, mai sont passés d’un claquement de doigts ;<br>
+                        Je suis sorti. e de chez-moi pour te partager ;<br>
+                        Pour pouvoir crier sur tous les toits ;<br>
+                        Que la vie est belle avec toi, la joie !<br>
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="bored_1">
-        <h2>bored</h2>
-    </section>
-    <section id="happy_1">
-
-        <ul class="c-rainbow">
-            <li class="c-rainbow__layer c-rainbow__layer--white">Avec Toi</li>
-            <li class="c-rainbow__layer c-rainbow__layer--orange">Avec Toi</li>
-            <li class="c-rainbow__layer c-rainbow__layer--red">Avec Toi</li>
-            <li class="c-rainbow__layer c-rainbow__layer--violet">Avec Toi</li>
-            <li class="c-rainbow__layer c-rainbow__layer--blue">Avec Toi</li>
-            <li class="c-rainbow__layer c-rainbow__layer--green">Avec Toi</li>
-            <li class="c-rainbow__layer c-rainbow__layer--yellow">Avec Toi</li>
-        </ul>
-        <div class="haiku">
-            <p>J’ai arrêté de chercher un endroit où je suis bien ;</p> 
-                <p>Parce que je me suis rendu.e compte, que je peux être heureux.euse partout ;</p>
-                 <p>Il suffit de mettre les bonnes lunettes, comme disent les anciens ;</p>
-                 <p>Pour ne plus voir le monde de façon floue ;</p>
- 
-                <p>Parfois, bêtement, je me suis arrêté.e pour te regarder passer ;</p>
-                 <p>Je suis désolée de t’avoir fait sombrer ainsi ;</p>
-                 <p>Jamais cela n’aurait dû t’être destiné ;</p>
-                 <p>J’aurais dû avoir une pensée plus réfléchie ;</p>
-
-                <p>Au début du confinement tu étais bel et bien présent ;</p>
-                 <p>Sans vraiment que je m’en rendre compte ;</p>
-
+    <section id="love_1" class="love">
+        <div class="container">
+            <div class="h2">
+                <h2 class="shake">AMOUR</h2>
+            </div>
+            <div class="div">
+                <div class="shake">
+                    <span class="big_txt">Une bouffée d'air frais !</span>
+                    <p>Nous voilà libérés, dehors comme dedans, nous pouvons vaquer à nos occupations comme
+                        bon nous semble, dans les limites des distances de sécurité.</p>
+                </div>
+            </div>
         </div>
-   
+    </section>
+    <section id="love_2" class="love">
+        <div class="container">
+            <div class="p">
+                <p class="shake">
+                    Aussitôt, le confinement levé, nous nous précipitons chez <span class="bold">nos êtres aimés</span>
+                    que cette pandémie a éloignés.
+                </p>
+            </div>
+            <div class="p">
+                <p class="shake">
+                    Les parents, grands-parents, les amis et les amants ; <span class="bold">prendre dans nos
+                        bras</span> les plus vigoureux et être aux côtés des plus à risques.
+                </p>
+            </div>
+            <div class="p">
+                <p class="shake">
+                    Quelle que soit la manière, <span class="bold">la réunion n’a jamais eu si bon goût</span>.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="love_3" class="love">
+        <div class="container">
+            <iframe src="https://drive.google.com/file/d/100LqHHShN3kj4SoTzRKvxWOYDNSqsYqU/preview"></iframe>
+        </div>
     </section>
 
-    <section id="happy_2">
-      
+    <section id="grumpy_1" class="grumpy">
+        <div class="container">
+            <div class="h2">
+                <h2 class="shake">COLÈRE</h2>
+            </div>
+            <div class="flex">
+                <div class="left">
+                    <div class="p a">
+                        <p class="shake">
+                            “J'étais assez en colère et j'ai éprouvé une certaine injustice quand je n'ai pas pu
+                            réaliser mon rêve qui était d'effectuer un échange universitaire au Japon. J'avais fait
+                            toutes les démarches qui ont été très longues et difficiles. Mais finalement ça a été
+                            annulé…”
+                        </p>
+                    </div>
+                    <div class="p b">
+                        <p class="shake">
+                            “Ce qui m'a beaucoup mis-e en colère, c'est le fait de devoir me battre pour que certains
+                            cours ne se fassent pas en présentiel. Vu que j'étais super flippé-e d'attraper la COVID et
+                            de contaminer mes parents, je ne comprenais pas que l'école décide qu'un exercice de
+                            présentation était plus important que la sécurité de tout-e-x-s.”
+                        </p>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="p">
+                        <p class="shake">
+                            “Ma colère était liée à la difficulté de suivre des cours à distance. Le poids émotionnel
+                            n’a pas été pris en compte et nous avions beaucoup plus de travail qu’en présentiel. Comme
+                            si le fait d’être à la maison nous donnait une raison de ne rien faire d’autre qu'étudier.”
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section id="happy_2">
+    <section id="grumpy_2" class="grumpy">
+        <div class="container">
+            <div class="p a">
+                <p class="shake">
+                    Malgré les mots d’amour et les moments de partage, tout n’est pas que joie dans cette période. En
+                    effet, nous sentons la colère parcourir notre corps.
+                </p>
+            </div>
+            <div class="p b">
+                <h3 class="shake">La colère</h3>
+                <p class="shake">
+                    de voir ses compatriotes ne <span class="bold">pas respecter</span> les consignes d’hygiène, de voir
+                    ces gens porter leur
+                    masque <span class="bold">sous le nez</span>,
+                    ne pas comprendre ce que <span class="bold">distanciation sociale</span> veut dire
+                    ou encore <span class="bold">tousser</span> partout sauf dans leur coude.
+
+                </p>
+            </div>
+        </div>
     </section>
-    <section id="happy_3">
-       
+    <section id="grumpy_3" class="grumpy">
+        <div class="container">
+            <div class="h2">
+                <h2 class="shake">Tout ça</h2>
+            </div>
+            <div class="p a">
+                <p class="shake">
+                    ça fait bouillonner le sang dans nos veines.<br>
+                    ça a mené à un nouveau semi-confinement.<br>
+                    ça a mené à une augmentation des cas.<br>
+                    ça a mené à un durcissement des mesures.<br>
+                </p>
+            </div>
+            <div class="p b">
+                <p class="shake">
+                    Nous avons le sentiment que nous ne sommes pas près d’en voir <span class="big_txt">la fin</span>.
+                </p>
+            </div>
+        </div>
     </section>
-    <section id="love_1">
-        <h2>love</h2>
-        <p class="shake">Nous sommes le 16 mars 2020 et la sentence est tombée : nous allons devoir nous confiner.
-            Personne n’a le
-            temps de s’adapter, on écoute et on obéit. La légèreté des beaux jours, du temps où nous nous croyions
-            immunisés à cette nouvelle maladie venant de contrées lointaines a été occultée par l'ampleur des
-            mesures prises par la Confédération.</p>
+    <section id="grumpy_4" class="grumpy">
+        <div class="container">
+            <div class="img">
+                <img src="/img/bd/ep1.jpg" alt="" class="shake">
+            </div>
+            <div class="img">
+                <img src="/img/bd/ep2.jpg" alt="" class="shake">
+            </div>
+        </div>
     </section>
-    <section id="grumpy_1">
-        <h2>grumpy</h2>
-        <audio controls="controls">
-            <source src=" https://docs.google.com/uc?export=download&id=1pSG1-x-UDfhkWUECslSBgVP9E9IOQ6at">
-        </audio>
+    <section id="grumpy_5" class="grumpy">
+        <div class="container">
+            <div class="img">
+                <img src="/img/bd/ep3.jpg" alt="" class="shake">
+            </div>
+            <div class="img">
+                <img src="/img/bd/ep4.jpg" alt="" class="shake">
+            </div>
+        </div>
     </section>
-    <section id="cry_1">
-        <h2>cry</h2>
+    <section id="grumpy_6" class="grumpy">
+        <div class="container">
+            <div class="img">
+                <img src="/img/bd/ep5.jpg" alt="" class="shake">
+            </div>
+            <div class="img">
+                <img src="/img/bd/ep6.jpg" alt="" class="shake">
+            </div>
+        </div>
     </section>
-    <section id="ahego_1">
-        <h2>ahego</h2>
+    <section id="grumpy_7" class="grumpy">
+        <div class="container">
+            <div class="img">
+                <img src="/img/bd/ep7.jpg" alt="" class="shake">
+            </div>
+            <div class="img">
+            </div>
+        </div>
     </section>
-    </div>
+
+    <section id="cry_1" class="cry">
+        <div class="container">
+            <div class="h2">
+                <h2 class="shake">TRISTESSE</h2>
+            </div>
+            <div class="h3">
+                <h3 class="shake">Podcast</h3>
+            </div>
+            <div class="audio">
+                <audio controls="controls">
+                    <source src="https://docs.google.com/uc?export=download&id=1rdEDUX9nxb4j6rMuUdxBf_z1gL_kfhBS">
+                </audio>
+            </div>
+        </div>
+    </section>
+    <section id="cry_2" class="cry">
+        <div class="container">
+            <div class="h3">
+                <h3 class="shake">Triste enfermement</h3>
+            </div>
+            <div class="flex">
+                <div class="left">
+                    <div class="p">
+                        <p class="shake poem">
+                            Au renouveau l’hiver devait faire place;<br>
+                            Au confinement il nous a laissé faire face;<br>
+                            Enfermer chez soi, sauf pour se nourrir;<br>
+                            Le visage masqué au moment de sortir;<br>
+                        </p>
+                    </div>
+                    <div class="p">
+                        <p class="shake poem">
+                            Les cas s’enchaînent, les médias s’affolent;<br>
+                            Je ne peux rassurer ma grand-mère qu’au téléphone;<br>
+                            J’aimerais pourtant la voir, envie incorrigible;<br>
+                            Ainsi que mes amis, devenus fréquentations intangibles;<br>
+                        </p>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="img">
+                        <img class="shake" src="/img/tristesse/tristesse_1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="cry_3" class="cry">
+        <div class="container">
+            <div class="flex">
+                <div class="left">
+                    <div class="img">
+                        <img class="shake" src="/img/tristesse/tristesse_2.png" alt="">
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="p">
+                        <p class="shake poem">
+                            Plus de monde dans les hôpitaux, ainsi que dans les cimetières;<br>
+                            Que doivent ressentir ces gens devant la pierre;<br>
+                            Perdre quelqu’un et ne pouvoir se serrer fort;<br>
+                            Comment alors trouver du réconfort;<br>
+                        </p>
+                    </div>
+                    <div class="p">
+                        <p class="shake poem">
+                            Les arbres enlèvent leur manteau orange;<br>
+                            Déconfinement, reconfinement, rien ne change;<br>
+                            La courbe des cas devient vertical;<br>
+                            Alors que chacun voulait un retour à la normale.<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="want_1" class="want">
+        <div class="container">
+            <div class="h2">
+                <h2 class="shake">ENVIE</h2>
+            </div>
+            <div class="flex">
+                <div class="left">
+                    <div class="p a">
+                        <p class="shake">
+                            “Cet événement a montré au monde notre fragilité. La fragilité de notre corps, la fragilité
+                            de notre système économique, la fragilité de l'emploi. Cet événement a mis en exergue ces
+                            fragilités. Il nous a permis de relativiser et de prendre du recul sur notre situation. Nous
+                            ne prendrons certainement plus certaines choses comme acquises. Nous apprécierons
+                            certainement d'avantages quelques plaisirs simples, et accorderons peut-être moins
+                            d'importances à des luxes futiles. Qui sait, cette pandémie pourrait nous permettre d'éviter
+                            l'effondrement.”
+                        </p>
+                    </div>
+                    <div class="p b">
+                        <p class="shake">
+                            “Je pense que malgré la difficulté de cette situation, nous pouvons tous ressortir avec
+                            quelque chose de positif.”
+                        </p>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="p c">
+                        <p class="shake">
+                            “J'espère sincèrement que l'humanité sortira changée de cette expérience. Nous avons vu des
+                            changements au niveau de l'écologie, de la solidarité et de notre considération du monde qui
+                            nous entoure qu'il faut à tout prix préserver. Si nous repartons bêtement comme avant, que
+                            nous courons dans le premier avion ou sur les événements commerciaux du prochain Black
+                            Friday, nous aurons perdu tout ce temps, cette énergie et toutes ces victimes pour rien.”
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="want_2" class="want">
+        <div class="container">
+            <div class="h3">
+                <h3 class="shake">Te retrouver</h3>
+            </div>
+            <div class="flex">
+                <div class="left">
+                    <div class="p a">
+                        <p class="shake poem">
+                            À l’intérieur de nous, tu es inscrit<br>
+                            À l’encre indélébile, et ce pour la vie<br>
+                            Nous avons tendance à t’oublier<br>
+                            Car tu es là depuis que nous sommes nés<br>
+                            En réalité, tu es si doux et tellement fragile<br>
+                            T’avoir dans nos vies ne tient qu’à un fil<br>
+                            Quand tu n’es plus là, quel désarroi<br>
+                            Nous ne savons plus quoi faire sans toi<br>
+                            Tu laisses un vide viscéral<br>
+                            Chercher à te combler nous devient vital<br>
+                            Ton absence se fait ressentir<br>
+                        </p>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="p b">
+                        <p class="shake poem">
+                            Néanmoins, il nous permet de mûrir<br>
+                            Nous apprenons à mieux gérer nos émotions<br>
+                            Mais, nous espérons que nous te retrouverons<br>
+                            Tu manques à nos êtres<br>
+                            Comme si chaque bouffée d’air était incomplète<br>
+                            Nous avons envie de te retrouver :<br>
+                        </p>
+                    </div>
+                    <div class="span">
+                        <span class="shake">Liberté</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="want_3" class="want">
+        <div class="container">
+            <div class="upLeft">
+                <div class="img"><img src="/img/portraits/Robin.jpg" alt="" class="shake"></div>
+                <div class="img"><img src="/img/portraits/Robin.jpg" alt="" class="shake"></div>
+                <div class="img"><img src="/img/portraits/Robin.jpg" alt="" class="shake"></div>
+                <div class="img"><img src="/img/portraits/Robin.jpg" alt="" class="shake"></div>
+                <div class="img"><img src="/img/portraits/Robin.jpg" alt="" class="shake"></div>
+                <div class="img"><img src="/img/portraits/Robin.jpg" alt="" class="shake"></div>
+            </div>
+            <div class="upRight">
+                <div class="img"><img src="/img/portraits/Robin.jpg" alt="" class="shake"></div>
+                <div class="img"><img src="/img/portraits/Robin.jpg" alt="" class="shake"></div>
+                <div class="img"><img src="/img/portraits/Robin.jpg" alt="" class="shake"></div>
+                <div class="img"><img src="/img/portraits/Robin.jpg" alt="" class="shake"></div>
+            </div>
+            <div class="downLeft">
+                <div class="img"><img src="/img/portraits/Robin.jpg" alt="" class="shake"></div>
+                <div class="img"><img src="/img/portraits/Robin.jpg" alt="" class="shake"></div>
+                <div class="img"><img src="/img/portraits/Robin.jpg" alt="" class="shake"></div>
+                <div class="img"><img src="/img/portraits/Robin.jpg" alt="" class="shake"></div>
+            </div>
+            <div class="downRight">
+                <div class="img"><img src="/img/portraits/Robin.jpg" alt="" class="shake"></div>
+                <div class="img"><img src="/img/portraits/Robin.jpg" alt="" class="shake"></div>
+                <div class="img"><img src="/img/portraits/Robin.jpg" alt="" class="shake"></div>
+                <div class="img"><img src="/img/portraits/Robin.jpg" alt="" class="shake"></div>
+                <div class="img"><img src="/img/portraits/Robin.jpg" alt="" class="shake"></div>
+                <div class="img"><img src="/img/portraits/Robin.jpg" alt="" class="shake"></div>
+            </div>
+        </div>
+    </section>
 
     <script src="/js/bundle.js"></script>
 </body>
