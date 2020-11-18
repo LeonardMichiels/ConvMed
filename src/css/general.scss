@@ -8,6 +8,9 @@ $anim5: calc(#{$anim4} + 1); //5
 $anim6: calc(#{$anim5} + 1); //6
 $anim7: calc(#{$anim6} + 1); //7
 $anim8: calc(#{$anim7} + 1); //8
+$anim9: calc(#{$anim8} + 1); //9
+$anim10: calc(#{$anim9} + 1); //10
+$anim11: calc(#{$anim10} + 1); //11
 
 $duration1: calc(1s / (var(--nvh) - 1));
 $duration2: calc(2s / (var(--nvh) - 1));
@@ -40,6 +43,11 @@ body {
     margin-top: 0;
     font-weight: 800;
     font-size: 8vw;
+  }
+  h3 {
+    margin: 0;
+    font-weight: 800;
+    font-size: 6vw;
   }
 }
 
@@ -265,23 +273,50 @@ section {
 #wow_1 .container {
   @include section_cont($anim7);
   h2 {
-    opacity: 0;
-    position: absolute;
-    left: -30vw;
-    top: 7vh;
-    --translate: 35vw;
-    animation: fadeSlideThenFade $duration2 linear 1 alternate paused forwards;
+    display: inline-block;
+    margin-left: 5vw;
+    transform: scale(0);
+    margin-left: 5vw;
+    margin-top: 7vh;
+    animation: bounceThenUnbounce $duration2 linear 1 alternate paused forwards;
     @include animation-delay($anim7);
   }
   p {
-    opacity: 0;
-    position: absolute;
+    transform: scale(0);
     width: 80vw;
-    right: 10vw;
-    bottom: -10vh;
-    --translate: 30vh;
-    animation: fadeSlideVertThenFade $duration2 linear 1 alternate paused forwards;
+    position: fixed;
+    right: 7vw;
+    animation: bounceThenUnbounce $duration2 linear 1 alternate paused forwards;
     @include animation-delay($anim7);
+  }
+}
+#wow_2 .container {
+  @include section_cont($anim8);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  h3 {
+    display: inline-block;
+    transform: scale(0);
+    animation: bounceThenUnbounce $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim8);
+  }
+  h3.a { margin-left: 5vw; }
+  h3.b { margin-left: 10vw; }
+  h3.c { margin-left: 15vw;  }
+}
+#wow_3 .container {
+  @include section_cont($anim9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  p {
+    display: inline-block;
+    transform: scale(0);
+    margin-left: 5vw;
+    width: 50%;
+    animation: bounceThenUnbounce $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim9);
   }
 }
 
@@ -386,6 +421,19 @@ section {
     opacity: 0;
   }
 }
+
+@keyframes bounceThenUnbounce {
+  25% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0);
+  }
+}
+
 @keyframes displaysOnYourTurn {
   0% {
     visibility: hidden;
