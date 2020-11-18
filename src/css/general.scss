@@ -216,7 +216,7 @@ section {
     @include animation-delay($anim4);
   }
 }
-#affraid_5 .scaredtext {
+#affraid_5 .container {
   @include section_cont($anim5);
   display: flex;
   flex-direction: column;
@@ -227,9 +227,9 @@ section {
     font-size: 0.8em;
     opacity: 0;
   }
-  div{
-  div.a,
-  div.c {
+  
+  p.a,
+  p.c {
     margin-right: 15%;
     transform: translate(20vw);
     --translate: -20vw;
@@ -244,7 +244,7 @@ section {
     @include animation-delay($anim5);
   }
 }
-}
+
 #affraid_6 .container {
   @include section_cont($anim6);
   h2 {
@@ -557,6 +557,5 @@ $root: ".c-rainbow";
 	animation-timing-function: linear;
 }
 .active {
-  mix-blend-mode: multiply;
-
+  filter:(invert(100%));
 }
