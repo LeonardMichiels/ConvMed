@@ -283,7 +283,7 @@ section {
 
 #wow_1 .container {
   @include section_cont($anim7);
-  h2 {
+  .h2 {
     display: inline-block;
     margin-left: 5vw;
     transform: scale(0);
@@ -292,7 +292,7 @@ section {
     animation: bounceThenUnbounce $duration2 linear 1 alternate paused forwards;
     @include animation-delay($anim7);
   }
-  p {
+  .p {
     transform: scale(0);
     width: 80vw;
     position: fixed;
@@ -306,22 +306,22 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  h3 {
+  .h3 {
     display: inline-block;
     transform: scale(0);
     animation: bounceThenUnbounce $duration2 linear 1 alternate paused forwards;
     @include animation-delay($anim8);
   }
-  h3.a { margin-left: 5vw; }
-  h3.b { margin-left: 10vw; }
-  h3.c { margin-left: 15vw;  }
+  .h3 .a { margin-left: 5vw; }
+  .h3 .b { margin-left: 10vw; }
+  .h3 .c { margin-left: 15vw;  }
 }
 #wow_3 .container {
   @include section_cont($anim9);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  p {
+  .p {
     display: inline-block;
     transform: scale(0);
     margin-left: 5vw;
