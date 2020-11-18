@@ -153,6 +153,7 @@ section {
         width: 50%;
       }
       .blancs {
+        opacity: 0;
         grid-area: 1 / 2 / span 1 / span 1;
         place-self: center center;
         height: 100%;
@@ -961,35 +962,86 @@ section {
     @include animation-delay($anim37);
   }
 }
-#want_3 .container {
+#want_3.backup .container {
   @include section_cont($anim38);
   display: grid;
   grid-template-columns: repeat(5, 20vw);
-  grid-template-columns: repeat(4, 25vh);
+  grid-template-rows: repeat(2, 50vh);
   .upLeft, .downRight {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
   .downLeft, .upRight {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .upLeft{
+    transform: translate(0, -100vw);
+    animation: slideDownThenSlideUp $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim38);
+    grid-area: 1 / 1 / span 1 / span 3;
+  }
+  .upRight{
+    transform: translate(100vw);
+    animation: slideLeftThenSlideRight $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim38);
+    grid-area: 1 / 4 / span 1 / span 2;
+  }
+  .downLeft{
+    transform: translate(100vw);
+    animation: slideRightThenSlideLeft $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim38);
+    grid-area: 2 / 1 / span 1 / span 2;
+  }
+  .downRight{
+    transform: translate(0, -100vw);
+    animation: slideUpThenSlideDown $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim38);
+    grid-area: 2 / 3 / span 1 / span 3;
+  }
+}
+#want_3 .container {
+  @include section_cont($anim38);
+  display: grid;
+  grid-template-columns: repeat(5, 20vw);
+  grid-template-rows: repeat(2, 50vh);
+  .upLeft, .downRight {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .downLeft, .upRight {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .upLeft{
+    grid-area: 1 / 1 / span 1 / span 3;
+  }
+  .upRight{
+    grid-area: 1 / 4 / span 1 / span 2;
+  }
+  .downLeft{
+    grid-area: 2 / 1 / span 1 / span 2;
+  }
+  .downRight{
+    grid-area: 2 / 3 / span 1 / span 3;
+  }
+  .img {
+    transform: scale(-180deg);
+    animation: spin $duration1 linear 1 alternate paused forwards;
+    @include animation-delay($anim38);
   }
 }
 
-@keyframes slideThenFade {
-  50% {
-    transform: translate(var(--translate));
-    opacity: 1;
-  }
-  99% {
-    transform: translate(var(--translate));
-    opacity: 0;
+@keyframes spin {
+  0% {
+    transform: rotate(-180deg) scale(0);
   }
   100% {
-    transform: translate(var(--translate));
-    opacity: 0;
+    transform: rotate(360deg) scale(1);
   }
 }
 @keyframes slideLeftThenSlideLeft {
@@ -1266,7 +1318,7 @@ section {
     background-color: orange;
   }
   100% {
-    background-color: cyan;
+    background-color: white;
   }
 }
 
