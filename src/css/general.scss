@@ -41,6 +41,15 @@ $anim37: calc(#{$anim36} + 1); //37
 $anim38: calc(#{$anim37} + 1); //38
 $anim39: calc(#{$anim38} + 1); //39
 
+$affraid: #0083ec;
+$wow: #FF6E32;
+$bored: #907CFF;
+$happy: #FFDF4F;
+$love: #FF436F;
+$grumpy: #E52427;
+$cry: #00d0e7;
+$want: #00e38f;
+
 $duration1: calc(1s / (var(--nvh) - 1));
 $duration2: calc(2s / (var(--nvh) - 1));
 @mixin animation-delay($sect_n) {
@@ -191,6 +200,7 @@ section {
 }
 #affraid_1 .container {
   @include section_cont($anim1);
+  color: white;
   .scaredtitle {
     opacity: 0;
     position: absolute;
@@ -213,6 +223,7 @@ section {
 }
 #affraid_2 .container {
   @include section_cont($anim2);
+  .h2, .h3, .big_txt, .scaredtitle {color: $affraid;}
   .scaredtitle {
     opacity: 0;
     position: absolute;
@@ -306,10 +317,10 @@ section {
     @include animation-delay($anim5);
   }
 }
-
 #affraid_6 .container {
   @include section_cont($anim6);
-  h2 {
+  .h2, .h3, .big_txt {color: white;}
+  .h2 {
     opacity: 0;
     position: absolute;
     left: -30vw;
@@ -332,6 +343,7 @@ section {
 
 #wow_1 .container {
   @include section_cont($anim7);
+  color: white;
   .h2 {
     display: inline-block;
     transform: scale(0);
@@ -351,6 +363,7 @@ section {
 }
 #wow_2 .container {
   @include section_cont($anim8);
+  .h2, .h3, .big_txt {color: $wow;}
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -374,6 +387,7 @@ section {
 }
 #wow_3 .container {
   @include section_cont($anim9);
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -402,6 +416,7 @@ section {
 
 #bored_1 .container {
   @include section_cont($anim11);
+  color: white;
   display: flex;
   flex-direction: column;
   .right {
@@ -464,6 +479,7 @@ section {
 }
 #bored_4 .container {
   @include section_cont($anim14);
+  color: white;
   .h2 {
     display: inline-block;
     margin-left: 5vw;
@@ -488,6 +504,7 @@ section {
 }
 #bored_5 .container {
   @include section_cont($anim15);
+  color: white;
   .h2 {
     display: inline-block;
     margin-left: 5vw;
@@ -508,6 +525,7 @@ section {
 }
 #bored_6 .container {
   @include section_cont($anim16);
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -522,6 +540,7 @@ section {
 }
 #bored_7 .container {
   @include section_cont($anim17);
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -602,6 +621,7 @@ section {
 }
 #happy_3 .container {
   @include section_cont($anim21);
+  .h2, .h3, .big_txt {color: $happy;}
   .h2 {
     width: 50%;
     margin-left: 5vw;
@@ -635,6 +655,7 @@ section {
 
 #love_1 .container {
   @include section_cont($anim23);
+  color: white;
   .h2 {
     display: inline-block;
     transform: scale(0);
@@ -659,6 +680,7 @@ section {
 }
 #love_2 .container {
   @include section_cont($anim24);
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -685,6 +707,7 @@ section {
 
 #grumpy_1 .container {
   @include section_cont($anim26);
+  color: white;
   .h2 {
     display: inline-block;
     margin-left: 5vw;
@@ -718,6 +741,7 @@ section {
 }
 #grumpy_2 .container {
   @include section_cont($anim27);
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -732,6 +756,7 @@ section {
 }
 #grumpy_3 .container {
   @include section_cont($anim28);
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -844,6 +869,7 @@ section {
 }
 #cry_2 .container {
   @include section_cont($anim34);
+  .h2, .h3, .big_txt {color: $cry;}
   .h3 {
     width: 70vw;
     margin-left: 5vw;
@@ -924,6 +950,7 @@ section {
 }
 #want_2 .container {
   @include section_cont($anim37);
+  .h2, .h3, .big_txt, .span {color: $want;}
   .h3 {
     width: 70vw;
     margin-left: 5vw;
@@ -1305,21 +1332,27 @@ section {
 }
 
 @keyframes bg-color {
-  0% {
-    background-color: white;
-  }
-  1% {
-    background-color: orange;
-  }
-  14% {
-    background-color: orange;
-  }
-  28% {
-    background-color: orange;
-  }
-  100% {
-    background-color: white;
-  }
+  0% { background-color: white; }
+  2.63% { background-color: $affraid; }
+  5.26% { background-color: white; }
+  7.89%, 10.52% { background-color: $affraid; }
+  13.15% { background-color: white; }
+  15.78% { background-color: $affraid; }
+  17.94% { background-color: $wow; }
+  21.05% { background-color: white;}
+  23.68%, 26.31% { background-color: $wow; }
+  28.94% { background-color: $bored; }
+  31.57%, 34.21% { background-color: white;}
+  36.84%, 47.36% {background-color: $bored;}
+  50%, 52.63% { background-color: $happy;}
+  55.26%, 57.89% { background-color: white;}
+  60.52%, 65.78% { background-color: $love;}
+  68.42%, 73.68% { background-color: $grumpy;}
+  76.31%, 84.21% { background-color: white;}
+  86.84% { background-color: $cry;}
+  89.47%, 92.1% { background-color: white;}
+  94.73% { background-color: $want;}
+  97.36%, 100% { background-color: white; }
 }
 
 ::-webkit-scrollbar {
@@ -1366,7 +1399,7 @@ $root: ".c-rainbow";
   --color-violet: #cf52eb;
   --color-blue: #44a3f7;
   --color-green: #5acb3c;
-  --color-yellow: #debf40;
+  --color-yellow: $happy;
 
   --color-foreground: var(--color-white);
   --font-name: Righteous;
