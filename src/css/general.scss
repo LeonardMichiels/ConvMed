@@ -507,6 +507,10 @@ iframe {
   z-index: 300;
   position: relative;
 }
+.c-rainbow{
+  display: block;
+
+}
 
 $root: ".c-rainbow";
 
@@ -534,11 +538,11 @@ $root: ".c-rainbow";
   counter-reset: rainbow;
   position: relative;
   display: block;
-
+  
   list-style: none;
 
   padding: 0;
-  margin: 0;
+  margin-left: 30%;
 
   &__layer {
     --text-color: var(--color-foreground);
@@ -629,4 +633,19 @@ $root: ".c-rainbow";
 }
 .active {
   filter:(invert(100%));
+}
+//pop
+.pop:hover{
+  animation: pop 0.2s linear 1;
+  animation-iteration-count: infinite;
+
+  cursor:default;
+}
+@keyframes pop{
+  
+  50%  {transform: scale(1.1);}
+}
+.haiku p{
+  text-align: center;
+  line-height: 0.8;
 }
