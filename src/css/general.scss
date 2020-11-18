@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Delius&display=swap");
 
 $anim1: 1;
 $anim2: calc(#{$anim1} + 1); //2
@@ -11,6 +12,24 @@ $anim8: calc(#{$anim7} + 1); //8
 $anim9: calc(#{$anim8} + 1); //9
 $anim10: calc(#{$anim9} + 1); //10
 $anim11: calc(#{$anim10} + 1); //11
+$anim12: calc(#{$anim11} + 1); //12
+$anim13: calc(#{$anim12} + 1); //13
+$anim14: calc(#{$anim13} + 1); //14
+$anim15: calc(#{$anim14} + 1); //15
+$anim16: calc(#{$anim15} + 1); //16
+$anim17: calc(#{$anim16} + 1); //17
+$anim18: calc(#{$anim17} + 1); //18
+$anim19: calc(#{$anim18} + 1); //19
+$anim20: calc(#{$anim19} + 1); //20
+$anim21: calc(#{$anim20} + 1); //21
+$anim22: calc(#{$anim21} + 1); //22
+$anim23: calc(#{$anim22} + 1); //23
+$anim24: calc(#{$anim23} + 1); //24
+$anim25: calc(#{$anim24} + 1); //25
+$anim26: calc(#{$anim25} + 1); //26
+$anim27: calc(#{$anim26} + 1); //27
+$anim28: calc(#{$anim27} + 1); //28
+$anim29: calc(#{$anim28} + 1); //29
 
 $duration1: calc(1s / (var(--nvh) - 1));
 $duration2: calc(2s / (var(--nvh) - 1));
@@ -38,9 +57,21 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 2vw;
 
+  .poem {
+    font-family: "Delius", cursive;
+    display: inline-block;
+    margin: 5vh 0 0 0;
+  }
+  .haiku {
+    font-family: "Delius", cursive;
+    display: inline-block;
+    font-size: 1.5vw;
+    margin: 5vh 0 0 0;
+  }
+
   h1,
   h2 {
-    margin-top: 0;
+    margin: 0;
     font-weight: 800;
     font-size: 8vw;
   }
@@ -49,19 +80,23 @@ body {
     font-weight: 800;
     font-size: 6vw;
   }
+  .big_txt {
+    margin: 0;
+    font-weight: 800;
+    font-size: 5vw;
+  }
 }
 
 .active {
   color: #353536;
-  filter: invert(100%)
+  filter: invert(100%);
 }
 
 img {
   width: 100%;
 }
-.shadow{
-  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-
+.shadow {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
 section {
@@ -173,7 +208,7 @@ section {
     animation: fadeSlideThenFade $duration2 linear 1 alternate paused forwards;
     @include animation-delay($anim2);
   }
-  .scaredtext{
+  .scaredtext {
     opacity: 0;
     position: absolute;
     width: 60vw;
@@ -240,7 +275,7 @@ section {
     font-size: 0.8em;
     opacity: 0;
   }
-  
+
   div.a,
   div.c {
     margin-right: 15%;
@@ -285,7 +320,6 @@ section {
   @include section_cont($anim7);
   .h2 {
     display: inline-block;
-    margin-left: 5vw;
     transform: scale(0);
     margin-left: 5vw;
     margin-top: 7vh;
@@ -306,15 +340,23 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  div {
+    display: inline-flex;
+  }
   .h3 {
-    display: inline-block;
     transform: scale(0);
     animation: bounceThenUnbounce $duration2 linear 1 alternate paused forwards;
     @include animation-delay($anim8);
   }
-  .h3 .a { margin-left: 5vw; }
-  .h3 .b { margin-left: 10vw; }
-  .h3 .c { margin-left: 15vw;  }
+  .h3 .a {
+    margin-left: 5vw;
+  }
+  .h3 .b {
+    margin-left: 10vw;
+  }
+  .h3 .c {
+    margin-left: 15vw;
+  }
 }
 #wow_3 .container {
   @include section_cont($anim9);
@@ -328,6 +370,231 @@ section {
     width: 50%;
     animation: bounceThenUnbounce $duration2 linear 1 alternate paused forwards;
     @include animation-delay($anim9);
+  }
+}
+#wow_4 .container {
+  @include section_cont($anim10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  iframe {
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    animation: bounceThenUnbounce $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim10);
+  }
+}
+
+#bored_1 .container {
+  @include section_cont($anim11);
+  display: flex;
+  flex-direction: column;
+  .right {
+    display: inline-block;
+    align-self: flex-end;
+    margin-right: 15vw;
+  }
+  .h2 {
+    display: inline-flex;
+    margin-left: 5vw;
+    margin-top: 5vh;
+  }
+  h3 {
+    font-size: 5vw;
+  }
+  .h2,
+  .h3,
+  .p {
+    opacity: 0;
+    animation: fadeInThenOut $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim11);
+  }
+}
+#bored_2 .container {
+  @include section_cont($anim12);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  .right {
+    display: flex;
+    justify-content: center;
+  }
+  .p,
+  .img {
+    opacity: 0;
+    animation: fadeInThenOut $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim12);
+  }
+}
+#bored_3 .container {
+  @include section_cont($anim13);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  .left {
+    display: flex;
+    justify-content: center;
+  }
+  .img {
+    width: 60%;
+  }
+  .p,
+  .img {
+    opacity: 0;
+    animation: fadeInThenOut $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim13);
+  }
+}
+#bored_4 .container {
+  @include section_cont($anim14);
+  .h2 {
+    display: inline-block;
+    margin-left: 5vw;
+    margin-top: 5vh;
+    opacity: 0;
+    animation: fadeInThenOut $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim14);
+  }
+  .audio {
+    opacity: 0;
+    position: absolute;
+    width: 80vw;
+    right: 10vw;
+    bottom: 20vh;
+    animation: fadeInThenOut $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim14);
+
+    audio {
+      width: 100%;
+    }
+  }
+}
+#bored_5 .container {
+  @include section_cont($anim15);
+  .h2 {
+    display: inline-block;
+    margin-left: 5vw;
+    margin-top: 5vh;
+    opacity: 0;
+    animation: fadeInThenOut $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim15);
+  }
+  .p {
+    width: 60%;
+    margin-left: 30%;
+    margin-top: 5%;
+    line-height: 1;
+    opacity: 0;
+    animation: fadeInThenOut $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim15);
+  }
+}
+#bored_6 .container {
+  @include section_cont($anim16);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  .p {
+    width: 60%;
+    margin-left: 10%;
+    line-height: 1;
+    opacity: 0;
+    animation: fadeInThenOut $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim16);
+  }
+}
+#bored_7 .container {
+  @include section_cont($anim17);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  div {
+    opacity: 0;
+    animation: fadeInThenOut $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim17);
+  }
+  .p {
+    width: 60%;
+    margin-left: 10%;
+    line-height: 1;
+  }
+  .span.a {
+    font-style: italic;
+    margin-left: 5%;
+  }
+  .span.b {
+    font-style: italic;
+    align-self: flex-end;
+    margin-right: 20%;
+  }
+}
+#bored_8 .container {
+  @include section_cont($anim18);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  iframe {
+    width: 100%;
+    height: 100%;
+    animation: fadeInThenOut $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim18);
+  }
+}
+
+#happy_1 .container {
+  @include section_cont($anim19);
+  .h2 {
+    width: 50%;
+    margin-left: 5vw;
+    margin-top: 5vh;
+  }
+  .h3 {
+    margin: 10vh 0 0 5vw;
+    width: 30vw;
+  }
+  .audio {
+    position: absolute;
+    width: 80vw;
+    right: 10vw;
+    bottom: 20vh;
+
+    audio {
+      width: 100%;
+    }
+  }
+  .h2, .h3, .audio {
+    transform: translate(150vw);
+    animation: runLeftThenRunLeft $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim19);
+  }
+}
+#happy_2 .container {
+  @include section_cont($anim20);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  iframe {
+    width: 100%;
+    height: 100%;
+    transform: translate(150vw);
+    animation: runLeftThenRunLeft $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim20);
+  }
+}
+#happy_3 .container {
+  @include section_cont($anim21);
+  .h2 {
+    width: 50%;
+    margin-left: 5vw;
+    margin-top: 5vh;
+  }
+  .flex {
+    display: flex;
+    align-items: space-evenly;
+    justify-content: space-evenly;
   }
 }
 
@@ -445,6 +712,33 @@ section {
   }
 }
 
+@keyframes runLeftThenRunLeft {
+  0% {
+    transform: rotate(-20deg) translate(150vw, 51vw);
+    transform-origin: bottom left;
+  }
+  30% {
+    transform: rotate(-20deg) translate(0);
+    transform-origin: bottom left;
+  }
+  40% {
+    transform: rotate(0) translate(0);
+    transform-origin: bottom left;
+  }
+  60% {
+    transform: rotate(0) translate(0);
+    transform-origin: bottom left;
+  }
+  70% {
+    transform: rotate(-20deg) translate(0);
+    transform-origin: bottom left;
+  }
+  100% {
+    transform: rotate(-20deg) translate(-150vw, -51vw);
+    transform-origin: bottom left;
+  }
+}
+
 @keyframes displaysOnYourTurn {
   0% {
     visibility: hidden;
@@ -543,7 +837,6 @@ $root: ".c-rainbow";
   &__layer {
     --text-color: var(--color-foreground);
     counter-increment: rainbow;
-    font-size: 10vw;
     color: var(--text-color);
 
     text-shadow: -1px -1px 0 var(--color-black), 1px -1px 0 var(--color-black), -1px 1px 0 var(--color-black),
@@ -599,34 +892,56 @@ $root: ".c-rainbow";
 }
 
 .shake {
-	display:inline-block
+  display: inline-block;
 }
 .shake {
-	display:block;
-	position:relative;
+  display: block;
+  position: relative;
 }
 @keyframes spaceboots {
-	0% { transform: translate(2px, 1px) rotate(0deg); }
-	10% { transform: translate(-1px, -2px) rotate(-1deg); }
-	20% { transform: translate(-3px, 0px) rotate(1deg); }
-	30% { transform: translate(0px, 2px) rotate(0deg); }
-	40% { transform: translate(1px, -1px) rotate(1deg); }
-	50% { transform: translate(-1px, 2px) rotate(-1deg); }
-	60% { transform: translate(-3px, 1px) rotate(0deg); }
-	70% { transform: translate(2px, 1px) rotate(-1deg); }
-	80% { transform: translate(-1px, -1px) rotate(1deg); }
-	90% { transform: translate(2px, 2px) rotate(0deg); }
-	100% { transform: translate(1px, -2px) rotate(-1deg); }
+  0% {
+    transform: translate(2px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(0px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(2px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(2px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
 }
 .shake:hover,
 .shake:focus {
   cursor: default;
-	animation-name: spaceboots;
-	animation-duration: 0.8s;
-	transform-origin:50% 50%;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
+  animation-name: spaceboots;
+  animation-duration: 0.8s;
+  transform-origin: 50% 50%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 .active {
-  filter:(invert(100%));
+  filter: (invert(100%));
 }
