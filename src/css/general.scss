@@ -85,6 +85,9 @@ body {
     font-weight: 800;
     font-size: 5vw;
   }
+  .bold {
+    font-weight: 800;
+  }
 }
 
 .active {
@@ -593,8 +596,103 @@ section {
   }
   .flex {
     display: flex;
-    align-items: space-evenly;
+    align-items: center;
     justify-content: space-evenly;
+  }
+  .h2, .p, .img {
+    transform: translate(150vw);
+    animation: runLeftThenRunLeft $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim21);
+  }
+}
+#happy_4 .container {
+  @include section_cont($anim22);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  .p, .img {
+    transform: translate(150vw);
+    animation: runLeftThenRunLeft $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim22);
+  }
+}
+
+#love_1 .container {
+  @include section_cont($anim23);
+  .h2 {
+    display: inline-block;
+    transform: scale(0);
+    margin-left: 5vw;
+    margin-top: 7vh;
+    transform: scale(0);
+    animation: beatThenFade $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim23);
+  }
+  .div {
+    transform: scale(0);
+    width: 60vw;
+    margin-left: 20vw;
+    margin-top: 12vh;
+    transform: scale(0);
+    animation: beatThenFade $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim23);
+    p {
+      margin: 0;
+    }
+  }
+}
+#love_2 .container {
+  @include section_cont($anim24);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .p {
+    width: 60vw;
+    transform: scale(0);
+    animation: beatThenFade $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim24);
+  }
+}
+#love_3 .container {
+  @include section_cont($anim25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  iframe {
+    width: 100%;
+    height: 100%;
+    animation: fadeInThenOut $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim25);
+  }
+}
+
+#grumpy_1 .container {
+  @include section_cont($anim26);
+  .h2 {
+    display: inline-block;
+    transform: scale(0);
+    margin-left: 5vw;
+    margin-top: 7vh;
+    transform: scale(0);
+    animation: beatThenFade $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim26);
+  }
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.4vw;
+    .p {
+      width: 40vw;
+    }
+    .left {
+      display: flex;
+      flex-direction: column;
+      .b {
+        justify-self: flex-end;
+      }
+    }
   }
 }
 
@@ -713,19 +811,19 @@ section {
 }
 
 @keyframes runLeftThenRunLeft {
-  0% {
-    transform: rotate(-20deg) translate(150vw, 51vw);
-    transform-origin: bottom left;
-  }
-  30% {
-    transform: rotate(-20deg) translate(0);
+  20% {
+    transform: rotate(-20deg) translate(100vw, 51vw);
     transform-origin: bottom left;
   }
   40% {
+    transform: rotate(-20deg) translate(0);
+    transform-origin: bottom left;
+  }
+  45% {
     transform: rotate(0) translate(0);
     transform-origin: bottom left;
   }
-  60% {
+  55% {
     transform: rotate(0) translate(0);
     transform-origin: bottom left;
   }
@@ -733,9 +831,30 @@ section {
     transform: rotate(-20deg) translate(0);
     transform-origin: bottom left;
   }
-  100% {
-    transform: rotate(-20deg) translate(-150vw, -51vw);
+  90% {
+    transform: rotate(-20deg) translate(-100vw, -51vw);
     transform-origin: bottom left;
+  }
+  100% {
+    transform: rotate(-20deg) translate(-100vw, -51vw);
+    transform-origin: bottom left;
+  }
+}
+
+@keyframes beatThenFade {
+  25% {
+    transform: scale(0);
+  }
+  45% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.5);
+    opacity: 0;
   }
 }
 
