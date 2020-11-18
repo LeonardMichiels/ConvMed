@@ -235,21 +235,21 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  p {
+  div {
     width: 65%;
     font-size: 0.8em;
     opacity: 0;
   }
   
-  p.a,
-  p.c {
+  div.a,
+  div.c {
     margin-right: 15%;
     transform: translate(20vw);
     --translate: -20vw;
     animation: fadeSlideThenFadeSlide $duration2 linear 1 alternate paused forwards;
     @include animation-delay($anim5);
   }
-  p.b {
+  div.b {
     margin-left: 10%;
     transform: translate(-20vw);
     --translate: 20vw;
@@ -260,7 +260,7 @@ section {
 
 #affraid_6 .container {
   @include section_cont($anim6);
-  h2 {
+  .scaredtitle {
     opacity: 0;
     position: absolute;
     left: -30vw;
