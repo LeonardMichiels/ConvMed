@@ -236,7 +236,7 @@ section {
     animation: fadeSlideThenFadeSlide $duration2 linear 1 alternate paused forwards;
     @include animation-delay($anim5);
   }
-  div.b {
+  p.b {
     margin-left: 10%;
     transform: translate(-20vw);
     --translate: 20vw;
