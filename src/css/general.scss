@@ -312,9 +312,9 @@ section {
     animation: bounceThenUnbounce $duration2 linear 1 alternate paused forwards;
     @include animation-delay($anim8);
   }
-  .h3.a { margin-left: 5vw; }
-  .h3.b { margin-left: 10vw; }
-  .h3.c { margin-left: 15vw;  }
+  .h3 .a { margin-left: 5vw; }
+  .h3 .b { margin-left: 10vw; }
+  .h3 .c { margin-left: 15vw;  }
 }
 #wow_3 .container {
   @include section_cont($anim9);
