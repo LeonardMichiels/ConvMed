@@ -1,5 +1,6 @@
-dist
+.history
 node_modules
+dist
 .cache
 .history
 sharp
