@@ -1,3 +1,5 @@
+
+
 // ==================================smooth-scroll-start==================================
  
 (function($) {
@@ -95,3 +97,4 @@ $(".btn").on("click", function () {
   console.log(this.hash)
   $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 400);
 });
+

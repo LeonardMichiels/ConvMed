@@ -3,11 +3,25 @@
 $anim1: 1;
 $anim2: calc(#{$anim1} + 1); //2
 $anim3: calc(#{$anim2} + 1); //3
+$anim4: calc(#{$anim3} + 1); //4
+$anim5: calc(#{$anim4} + 1); //5
+$anim6: calc(#{$anim5} + 1); //6
+$anim7: calc(#{$anim6} + 1); //7
+$anim8: calc(#{$anim7} + 1); //8
 
 $duration1: calc(1s / (var(--nvh) - 1));
 $duration2: calc(2s / (var(--nvh) - 1));
 @mixin animation-delay($sect_n) {
   animation-delay: calc(var(--scroll) * -1s + ((#{$sect_n} - 1) * (1s / (var(--nvh) - 1))));
+}
+@mixin section_cont($turn) {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  animation: displaysOnYourTurn $duration2 linear 1 alternate paused forwards;
+  @include animation-delay($turn);
 }
 
 body {
@@ -19,13 +33,13 @@ body {
   animation: bg-color 1s linear 1 alternate paused forwards;
   animation-delay: calc(var(--scroll) * -1s);
   font-family: "Inter", sans-serif;
-  font-size: 2em;
+  font-size: 2vw;
 
   h1,
   h2 {
     margin-top: 0;
     font-weight: 800;
-    font-size: 6em;
+    font-size: 8vw;
   }
 }
 
@@ -38,7 +52,7 @@ section {
   width: 95vw;
 }
 #home_1 .container {
-  position: fixed;
+  @include section_cont(0);
   .title_cont {
     position: relative;
     height: 100vh;
@@ -110,10 +124,7 @@ section {
   }
 }
 #affraid_1 .container {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
+  @include section_cont($anim1);
   h2 {
     opacity: 0;
     position: absolute;
@@ -135,10 +146,7 @@ section {
   }
 }
 #affraid_2 .container {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
+  @include section_cont($anim2);
   h2 {
     opacity: 0;
     position: absolute;
@@ -160,10 +168,7 @@ section {
   }
 }
 #affraid_3 .container {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
+  @include section_cont($anim3);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -183,6 +188,77 @@ section {
     --translate: 1000px;
     animation: fadeSlideVertThenFadeSlide $duration2 linear 1 alternate paused forwards;
     @include animation-delay($anim3);
+  }
+}
+#affraid_4 .container {
+  @include section_cont($anim4);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  .img_cont {
+    opacity: 0;
+    width: 25%;
+  }
+  .img_cont.a {
+    transform: translate(100vw);
+    --translate: 43vw;
+    animation: fadeSlideThenFadeSlide $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim4);
+  }
+  .img_cont.b {
+    transform: translate(-100vw);
+    --translate: -43vw;
+    animation: fadeSlideThenFadeSlide $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim4);
+  }
+}
+#affraid_5 .container {
+  @include section_cont($anim5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p {
+    width: 65%;
+    font-size: 0.8em;
+    opacity: 0;
+  }
+  p.a,
+  p.c {
+    margin-right: 15%;
+    transform: translate(20vw);
+    --translate: -20vw;
+    animation: fadeSlideThenFadeSlide $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim5);
+  }
+  p.b {
+    margin-left: 10%;
+    transform: translate(-20vw);
+    --translate: 20vw;
+    animation: fadeSlideThenFadeSlide $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim5);
+  }
+}
+#affraid_6 .container {
+  @include section_cont($anim6);
+  h2 {
+    opacity: 0;
+    position: absolute;
+    left: -30vw;
+    top: 7vh;
+    --translate: 35vw;
+    animation: fadeSlideThenFade $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim6);
+  }
+  audio {
+    opacity: 0;
+    position: absolute;
+    width: 80vw;
+    right: 10vw;
+    bottom: -10vh;
+    --translate: 30vh;
+    animation: fadeSlideVertThenFade $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim6);
   }
 }
 
@@ -219,6 +295,22 @@ section {
     display: none;
   }
 }
+@keyframes fadeSlideThenFadeSlide {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    transform: translate(0);
+    opacity: 1;
+  }
+  99% {
+    transform: translate(var(--translate));
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
 @keyframes fadeSlideVertThenFadeSlide {
   0% {
     opacity: 0;
@@ -229,6 +321,22 @@ section {
   }
   99% {
     margin-bottom: calc(var(--translate) * 2);
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+@keyframes fadeSlideVertThenFade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    margin-bottom: var(--translate);
+    opacity: 1;
+  }
+  99% {
+    margin-bottom: var(--translate);
     opacity: 0;
   }
   100% {
@@ -267,6 +375,20 @@ section {
   100% {
     opacity: 0;
     display: none;
+  }
+}
+@keyframes displaysOnYourTurn {
+  0% {
+    visibility: hidden;
+  }
+  1% {
+    visibility: visible;
+  }
+  99% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
   }
 }
 
@@ -311,3 +433,97 @@ section {
   }
 }
 
+iframe {
+  z-index: 300;
+  position: relative;
+}
+
+$root: ".c-rainbow";
+
+:root {
+  --color-background: #31037d;
+
+  --axis-x: 1px;
+  --axis-y: 1rem;
+  --delay: 10;
+
+  --color-black: #000;
+  --color-white: #fff;
+  --color-orange: #d49c3d;
+  --color-red: #d14b3d;
+  --color-violet: #cf52eb;
+  --color-blue: #44a3f7;
+  --color-green: #5acb3c;
+  --color-yellow: #debf40;
+
+  --color-foreground: var(--color-white);
+  --font-name: Righteous;
+}
+
+#{$root} {
+  counter-reset: rainbow;
+  position: relative;
+  display: block;
+
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+
+  &__layer {
+    --text-color: var(--color-foreground);
+    counter-increment: rainbow;
+    font-size: 10vw;
+    color: var(--text-color);
+
+    text-shadow: -1px -1px 0 var(--color-black), 1px -1px 0 var(--color-black), -1px 1px 0 var(--color-black),
+      1px 1px 0 var(--color-black), 4px 4px 0 rgba(0, 0, 0, 0.2);
+
+    animation: rainbow 1.5s ease-in-out infinite;
+
+    @for $i from 1 through 7 {
+      &:nth-child(#{$i}) {
+        animation-delay: calc(#{$i} / var(--delay) * 1s);
+        left: calc(var(--axis-x) * #{$i});
+        z-index: -#{$i * 10};
+      }
+    }
+
+    &:not(:first-child) {
+      position: absolute;
+      top: 0;
+    }
+
+    &--white {
+      --text-color: var(--color-white);
+    }
+    &--orange {
+      --text-color: var(--color-orange);
+    }
+    &--red {
+      --text-color: var(--color-red);
+    }
+    &--violet {
+      --text-color: var(--color-violet);
+    }
+    &--blue {
+      --text-color: var(--color-blue);
+    }
+    &--green {
+      --text-color: var(--color-green);
+    }
+    &--yellow {
+      --text-color: var(--color-yellow);
+    }
+  }
+}
+
+@keyframes rainbow {
+  0%,
+  100% {
+    transform: translatey(var(--axis-y));
+  }
+  50% {
+    transform: translatey(calc(var(--axis-y) * -1));
+  }
+}
