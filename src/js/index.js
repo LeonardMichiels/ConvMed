@@ -1,4 +1,4 @@
-
+var currentSlide = 0;
 
 // ==================================smooth-scroll-start==================================
  
@@ -7,10 +7,10 @@
   
     var $slides = $(selector);
   
-    var currentSlide = 0;
     var isAnimating = false;
   
     var stopAnimation = function() {
+      console.log(currentSlide)
       setTimeout(function() {
         isAnimating = false;
       }, 300);
@@ -76,6 +76,8 @@
     );
   })(jQuery);
   // ==================================smooth-scroll-end==================================
+
+
 //nav-start
 // Get the container element
 var btnContainer = document.getElementById("navbar");
@@ -93,8 +95,8 @@ for (var i = 0; i < btns.length; i++) {
 }
 
 
-$(".btn").on("click", function () {
-  console.log(this.hash)
+$(".btn").on("click", function (evt) {
+  currentSlide = $(evt.currentTarget).data("slide-n")
   $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 400);
 });
 
