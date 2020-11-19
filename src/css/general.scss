@@ -2045,11 +2045,10 @@ html {
   height: 100%;
 }
 
-#rainCointainer {
+#rainContainer {
   height: 100%;
   margin: 0;
   overflow: hidden;
-  background: linear-gradient(to bottom, #202020, #111119);
 }
 
 .rain {
@@ -2064,7 +2063,6 @@ html {
   display: none;
   z-index: 1;
   bottom: 60px;
-  opacity: 0.5;
 }
 
 #rainCointainer.back-row-toggle .rain.back-row {
@@ -2576,11 +2574,10 @@ body.single-toggle .drop:nth-child(10) {
     padding-left: 5px;
   }
 }
-#heartbeat
+.heartbeat
 {
   position: relative;
-  width: 100px;
-  height: 90px;
+  
   animation: heartbeat 1.2s infinite;
 }
 
