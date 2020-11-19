@@ -22,10 +22,11 @@ var topIsReached = function ($elem) {
   return rect.top >= 0;
 };
 
-function handleSlide() {
+function handleSlide(event) {
   var $currentSlide = $($slides[currentSlide]);
 
   if (isAnimating) {
+    console.log('is animating')
     event.preventDefault();
     return;
   }
@@ -34,8 +35,14 @@ function handleSlide() {
 
   if (direction < 0) {
     // next
-    if (currentSlide + 1 >= $slides.length) return;
-    if (!bottomIsReached($currentSlide)) return;
+    if (currentSlide + 1 >= $slides.length) {
+      console.log("return 1")
+      return; 
+    }/* 
+    if (!bottomIsReached($currentSlide)) {
+      console.log("return 2")
+      return; 
+    } */
     event.preventDefault();
     currentSlide++;
     var $slide = $($slides[currentSlide]);
@@ -68,6 +75,7 @@ function handleSlide() {
 }
 
 document.addEventListener("wheel", function (event) {
+    console.log("scroll")
     handleSlide(event)
   },
   { passive: false }

@@ -109,11 +109,6 @@ body {
   }
 }
 
-.active {
-  color: #353536;
-  filter: invert(100%);
-}
-
 img {
   width: 100%;
 }
@@ -828,7 +823,7 @@ section {
   }
 }
 #grumpy_7 .container {
-  @include section_cont($anim32);
+  @include section_cont(32);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -836,7 +831,7 @@ section {
     width: 35vw;
     transform: translate(100vw);
     animation: slideLeftThenSlideLeft $duration2 linear 1 alternate paused forwards;
-    @include animation-delay($anim32);
+    @include animation-delay(32);
 
     img {
       width: 100%;
@@ -845,7 +840,7 @@ section {
 }
 
 #cry_1 .container {
-  @include section_cont($anim33);
+  @include section_cont(33);
   .h2 {
     width: 50%;
     margin-left: 5vw;
@@ -870,11 +865,11 @@ section {
   .audio {
     transform: translate(0, 40vh);
     animation: fadeSlideUpThenFadeSlideDown $duration2 linear 1 alternate paused forwards;
-    @include animation-delay($anim33);
+    @include animation-delay(33);
   }
 }
 #cry_2 .container {
-  @include section_cont($anim34);
+  @include section_cont(34);
   .h2, .h3, .big_txt {color: $cry;}
   .h3 {
     width: 70vw;
@@ -891,11 +886,11 @@ section {
   .img {
     transform: translate(0, 40vw);
     animation: fadeSlideUpThenFadeSlideDown $duration2 linear 1 alternate paused forwards;
-    @include animation-delay($anim34);
+    @include animation-delay(34);
   }
 }
 #cry_3 .container {
-  @include section_cont($anim35);
+  @include section_cont(35);
   .flex {
     display: flex;
     align-items: center;
@@ -909,19 +904,19 @@ section {
   .img {
     transform: translate(0, 40vw);
     animation: fadeSlideUpThenFadeSlideDown $duration2 linear 1 alternate paused forwards;
-    @include animation-delay($anim35);
+    @include animation-delay(35);
   }
 }
 
 #want_1 .container {
-  @include section_cont($anim36);
+  @include section_cont(36);
   .h2 {
     display: inline-block;
     margin-left: 5vw;
     margin-top: 7vh;
     transform: translate(0, -100vw);
     animation: slideDownThenSlideUp $duration2 linear 1 alternate paused forwards;
-    @include animation-delay($anim36);
+    @include animation-delay(36);
   }
   .flex {
     display: flex;
@@ -933,13 +928,13 @@ section {
       width: 50vw;
       transform: translate(100vw);
       animation: slideRightThenSlideLeft $duration2 linear 1 alternate paused forwards;
-      @include animation-delay($anim36);
+      @include animation-delay(36);
     }
     .p.c {
       width: 20vw;
       transform: translate(100vw);
       animation: slideLeftThenSlideRight $duration2 linear 1 alternate paused forwards;
-      @include animation-delay($anim36);
+      @include animation-delay(36);
     }
     .left {
       display: flex;
@@ -949,13 +944,13 @@ section {
         width: 20vw;
         transform: translate(0, -100vw);
         animation: slideUpThenSlideDown $duration2 linear 1 alternate paused forwards;
-        @include animation-delay($anim36);
+        @include animation-delay(36);
       }
     }
   }
 }
 #want_2 .container {
-  @include section_cont($anim37);
+  @include section_cont(37);
   .h2, .h3, .big_txt, .span {color: $want;}
   .h3 {
     width: 70vw;
@@ -975,28 +970,28 @@ section {
   .h3 {
     transform: translate(0, -100vw);
     animation: slideDownThenSlideUp $duration2 linear 1 alternate paused forwards;
-    @include animation-delay($anim37);
+    @include animation-delay(37);
   }
   .p.a {
     transform: translate(100vw);
     animation: slideRightThenSlideLeft $duration2 linear 1 alternate paused forwards;
-    @include animation-delay($anim37);
+    @include animation-delay(37);
   }
   .p.b {
     transform: translate(100vw);
     animation: slideLeftThenSlideRight $duration2 linear 1 alternate paused forwards;
-    @include animation-delay($anim37);
+    @include animation-delay(37);
   }
   .span {
     font-family: "Delius", cursive;
     font-size: 5vw;
     transform: translate(0, -100vw);
     animation: slideUpThenSlideDown $duration2 linear 1 alternate paused forwards;
-    @include animation-delay($anim37);
+    @include animation-delay(37);
   }
 }
 #want_3.backup .container {
-  @include section_cont($anim38);
+  @include section_cont(38);
   display: grid;
   grid-template-columns: repeat(5, 20vw);
   grid-template-rows: repeat(2, 50vh);
@@ -1013,30 +1008,30 @@ section {
   .upLeft{
     transform: translate(0, -100vw);
     animation: slideDownThenSlideUp $duration2 linear 1 alternate paused forwards;
-    @include animation-delay($anim38);
+    @include animation-delay(38);
     grid-area: 1 / 1 / span 1 / span 3;
   }
   .upRight{
     transform: translate(100vw);
     animation: slideLeftThenSlideRight $duration2 linear 1 alternate paused forwards;
-    @include animation-delay($anim38);
+    @include animation-delay(38);
     grid-area: 1 / 4 / span 1 / span 2;
   }
   .downLeft{
     transform: translate(100vw);
     animation: slideRightThenSlideLeft $duration2 linear 1 alternate paused forwards;
-    @include animation-delay($anim38);
+    @include animation-delay(38);
     grid-area: 2 / 1 / span 1 / span 2;
   }
   .downRight{
     transform: translate(0, -100vw);
     animation: slideUpThenSlideDown $duration2 linear 1 alternate paused forwards;
-    @include animation-delay($anim38);
+    @include animation-delay(38);
     grid-area: 2 / 3 / span 1 / span 3;
   }
 }
-#want_3 .container {
-  @include section_cont($anim38);
+#want_3.backup .container {
+  @include section_cont(38);
   display: grid;
   grid-template-columns: repeat(5, 20vw);
   grid-template-rows: repeat(2, 50vh);
@@ -1065,7 +1060,26 @@ section {
   .img {
     transform: scale(-180deg);
     animation: spin $duration1 linear 1 alternate paused forwards;
-    @include animation-delay($anim38);
+    @include animation-delay(38);
+  }
+}
+#want_3 .container {
+  @include section_cont(38);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  .img {
+    width: 20vw;
+    @media screen and (max-width: 1200px) {
+      width: 25vw;
+    }
+    @media screen and (max-width: 700px) {
+      width: 33vw;
+    }
+    transform: scale(-180deg);
+    animation: spin $duration1 linear 1 alternate paused forwards;
+    @include animation-delay(38);
   }
 }
 
@@ -1538,6 +1552,6 @@ $root: ".c-rainbow";
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-.active {
+.active.backup {
   filter: (invert(100%));
 }
