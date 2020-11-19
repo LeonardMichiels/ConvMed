@@ -26,7 +26,6 @@ function handleSlide(event) {
   var $currentSlide = $($slides[currentSlide]);
 
   if (isAnimating) {
-    console.log('is animating')
     event.preventDefault();
     return;
   }
@@ -36,11 +35,9 @@ function handleSlide(event) {
   if (direction < 0) {
     // next
     if (currentSlide + 1 >= $slides.length) {
-      console.log("return 1")
       return; 
     }/* 
     if (!bottomIsReached($currentSlide)) {
-      console.log("return 2")
       return; 
     } */
     event.preventDefault();
@@ -81,10 +78,26 @@ document.addEventListener("wheel", function (event) {
   { passive: false }
 );
 
-$('iframe').contents().on('scroll', (evt) => {
+/* $('iframe').contents().on('scroll', (evt) => {
   console.log("scroll iframe")
   handleSlide(evt)
-})
+}) */
+
+/* $("#boredIframe").on('load', function () {
+  let iframe = $("#boredIframe").contents();
+
+ $(iframe).on('scroll', function (evt) { 
+   console.log("scroll iframe")
+    handleSlide(evt)
+ });
+}); */
+
+var myIframe = document.getElementById('boredIframe');
+myIframe.onload = function () {
+    console.log("scroll iframe")
+    myIframe.contentWindow.handleSlide(evt);
+}
+
 // ==================================smooth-scroll-end==================================
 
 
