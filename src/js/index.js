@@ -101,4 +101,3 @@ $(".btn").on("click", function (evt) {
   currentSlide = $(evt.currentTarget).data("slide-n")
   $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 400);
 });
-
