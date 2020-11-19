@@ -42,11 +42,11 @@ $anim38: calc(#{$anim37} + 1); //38
 $anim39: calc(#{$anim38} + 1); //39
 
 $affraid: #0083ec;
-$wow: #FF6E32;
-$bored: #907CFF;
-$happy: #FFDF4F;
-$love: #FF436F;
-$grumpy: #E52427;
+$wow: #ff6e32;
+$bored: #907cff;
+$happy: #ffdf4f;
+$love: #ff436f;
+$grumpy: #e52427;
 $cry: #00d0e7;
 $want: #00e38f;
 
@@ -107,6 +107,11 @@ body {
   .bold {
     font-weight: 800;
   }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
 }
 
 img {
@@ -114,6 +119,17 @@ img {
 }
 .shadow {
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.emoji_cont {
+  width: 30vw;
+  .cls-1 {
+    stroke: white;
+  }
+  .cls-2 {
+    fill: white;
+    stroke: white;
+  }
 }
 
 section {
@@ -208,6 +224,7 @@ section {
     left: -30vw;
     top: 7vh;
     --translate: 35vw;
+    --moreTransform: rotate(0);
     animation: fadeSlideThenFade $duration2 linear 1 alternate paused forwards;
     @include animation-delay($anim1);
   }
@@ -218,19 +235,36 @@ section {
     right: -30vw;
     bottom: 20vh;
     --translate: -35vw;
+    --moreTransform: rotate(0);
+    animation: fadeSlideThenFade $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim1);
+  }
+  .emoji_cont {
+    position: fixed;
+    bottom: -10vh;
+    transform: rotate(-20deg);
+    left: -33vw;
+    --translate: 33vw;
+    --moreTransform: rotate(-20deg);
     animation: fadeSlideThenFade $duration2 linear 1 alternate paused forwards;
     @include animation-delay($anim1);
   }
 }
 #affraid_2 .container {
   @include section_cont($anim2);
-  .h2, .h3, .big_txt, .scaredtitle {color: $affraid;}
+  .h2,
+  .h3,
+  .big_txt,
+  .scaredtitle {
+    color: $affraid;
+  }
   .scaredtitle {
     opacity: 0;
     position: absolute;
     right: -30vw;
     top: 7vh;
     --translate: -35vw;
+    --moreTransform: rotate(0);
     animation: fadeSlideThenFade $duration2 linear 1 alternate paused forwards;
     @include animation-delay($anim2);
   }
@@ -241,6 +275,7 @@ section {
     left: -30vw;
     bottom: 20vh;
     --translate: 35vw;
+    --moreTransform: rotate(0);
     animation: fadeSlideThenFade $duration2 linear 1 alternate paused forwards;
     @include animation-delay($anim2);
   }
@@ -320,13 +355,18 @@ section {
 }
 #affraid_6 .container {
   @include section_cont($anim6);
-  .h2, .h3, .big_txt {color: white;}
+  .h2,
+  .h3,
+  .big_txt {
+    color: white;
+  }
   .h2 {
     opacity: 0;
     position: absolute;
     left: -30vw;
     top: 7vh;
     --translate: 35vw;
+    --moreTransform: rotate(0);
     animation: fadeSlideThenFade $duration2 linear 1 alternate paused forwards;
     @include animation-delay($anim6);
   }
@@ -361,10 +401,28 @@ section {
     animation: bounceThenUnbounce $duration2 linear 1 alternate paused forwards;
     @include animation-delay($anim7);
   }
+  .emoji_cont {
+    margin-left: 65vw;
+    margin-top: 12vh;
+    transform: rotate(20deg) scale(0);
+    animation: bounceThenUnbounceEmoji $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim7);
+    .cls-1 {
+      stroke: white;
+    }
+    .cls-2 {
+      stroke: white;
+      fill: white;
+    }
+  }
 }
 #wow_2 .container {
   @include section_cont($anim8);
-  .h2, .h3, .big_txt {color: $wow;}
+  .h2,
+  .h3,
+  .big_txt {
+    color: $wow;
+  }
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -436,6 +494,14 @@ section {
   .h2,
   .h3,
   .p {
+    opacity: 0;
+    animation: fadeInThenOut $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim11);
+  }
+  .emoji_cont {
+    position: absolute;
+    bottom: -10vh;
+    transform: rotate(-20deg);
     opacity: 0;
     animation: fadeInThenOut $duration2 linear 1 alternate paused forwards;
     @include animation-delay($anim11);
@@ -580,6 +646,13 @@ section {
 
 #happy_1 .container {
   @include section_cont($anim19);
+  .emoji_cont {
+    position: absolute;
+    right: 10vw;
+    transform: rotate(20deg) scale(0);
+    animation: bounceThenUnbounceEmoji $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim19);
+  }
   .h2 {
     width: 50%;
     margin-left: 5vw;
@@ -622,7 +695,11 @@ section {
 }
 #happy_3 .container {
   @include section_cont($anim21);
-  .h2, .h3, .big_txt {color: $happy;}
+  .h2,
+  .h3,
+  .big_txt {
+    color: $happy;
+  }
   .h2 {
     width: 50%;
     margin-left: 5vw;
@@ -678,6 +755,14 @@ section {
       margin: 0;
     }
   }
+  .emoji_cont {
+    position: absolute;
+    top: -10vh;
+    right: 0;
+    transform: scale(0) rotate(20deg);
+    animation: beatThenFadeEmoji $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim23);
+  }
 }
 #love_2 .container {
   @include section_cont($anim24);
@@ -709,6 +794,22 @@ section {
 #grumpy_1 .container {
   @include section_cont($anim26);
   color: white;
+  .emoji_cont {
+    position: absolute;
+    right: 0;
+    top: -15vh;
+    transform: scale(1000) rotate(20deg);
+    opacity: 0;
+    animation: dezoomThenDezoomEmoji $duration2 linear 1 alternate paused forwards;
+    @include animation-delay($anim26);
+    .cls-1 {
+      fill: white;
+    }
+    .cls-2 {
+      fill: none;
+      stroke: white;
+    }
+  }
   .h2 {
     display: inline-block;
     margin-left: 5vw;
@@ -838,39 +939,65 @@ section {
     }
   }
 }
-
-#cry_1 .container {
+#grumpy_8 .container {
   @include section_cont(33);
+  color: white;
   .h2 {
-    width: 50%;
+    display: inline-block;
     margin-left: 5vw;
     margin-top: 5vh;
-  }
-  .h3 {
-    margin: 10vh 0 0 5vw;
-    width: 30vw;
+    transform: scale(100);
+    opacity: 0;
+    animation: dezoomThenDezoom $duration2 linear 1 alternate paused forwards;
+    @include animation-delay(33);
   }
   .audio {
+    opacity: 0;
     position: absolute;
     width: 80vw;
     right: 10vw;
     bottom: 20vh;
+    transform: scale(100);
+    opacity: 0;
+    animation: dezoomThenDezoom $duration2 linear 1 alternate paused forwards;
+    @include animation-delay(33);
 
     audio {
       width: 100%;
     }
   }
-  .h2,
-  .h3,
-  .audio {
+}
+
+#cry_1 .container {
+  @include section_cont(34);
+  .h2 {
+    width: 50%;
+    margin-left: 5vw;
+    margin-top: 5vh;
+  }
+  .h2 {
     transform: translate(0, 40vh);
     animation: fadeSlideUpThenFadeSlideDown $duration2 linear 1 alternate paused forwards;
-    @include animation-delay(33);
+    @include animation-delay(34);
+  }
+  .emoji_cont {
+    position: absolute;
+    right: 10vw;
+    transform: translate(0, 40vh) rotate(20deg);
+    animation: fadeSlideUpThenFadeSlideDownEmoji $duration2 linear 1 alternate paused forwards;
+    @include animation-delay(34);
+    .cls-1 {
+      stroke: #323232;
+    }
   }
 }
 #cry_2 .container {
-  @include section_cont(34);
-  .h2, .h3, .big_txt {color: $cry;}
+  @include section_cont(35);
+  .h2,
+  .h3,
+  .big_txt {
+    color: $cry;
+  }
   .h3 {
     width: 70vw;
     margin-left: 5vw;
@@ -886,11 +1013,11 @@ section {
   .img {
     transform: translate(0, 40vw);
     animation: fadeSlideUpThenFadeSlideDown $duration2 linear 1 alternate paused forwards;
-    @include animation-delay(34);
+    @include animation-delay(35);
   }
 }
 #cry_3 .container {
-  @include section_cont(35);
+  @include section_cont(36);
   .flex {
     display: flex;
     align-items: center;
@@ -904,19 +1031,19 @@ section {
   .img {
     transform: translate(0, 40vw);
     animation: fadeSlideUpThenFadeSlideDown $duration2 linear 1 alternate paused forwards;
-    @include animation-delay(35);
+    @include animation-delay(36);
   }
 }
 
 #want_1 .container {
-  @include section_cont(36);
+  @include section_cont(37);
   .h2 {
     display: inline-block;
     margin-left: 5vw;
     margin-top: 7vh;
     transform: translate(0, -100vw);
     animation: slideDownThenSlideUp $duration2 linear 1 alternate paused forwards;
-    @include animation-delay(36);
+    @include animation-delay(37);
   }
   .flex {
     display: flex;
@@ -928,13 +1055,13 @@ section {
       width: 50vw;
       transform: translate(100vw);
       animation: slideRightThenSlideLeft $duration2 linear 1 alternate paused forwards;
-      @include animation-delay(36);
+      @include animation-delay(37);
     }
     .p.c {
       width: 20vw;
       transform: translate(100vw);
       animation: slideLeftThenSlideRight $duration2 linear 1 alternate paused forwards;
-      @include animation-delay(36);
+      @include animation-delay(37);
     }
     .left {
       display: flex;
@@ -944,14 +1071,35 @@ section {
         width: 20vw;
         transform: translate(0, -100vw);
         animation: slideUpThenSlideDown $duration2 linear 1 alternate paused forwards;
-        @include animation-delay(36);
+        @include animation-delay(37);
       }
+    }
+  }
+  .emoji_cont {
+    position: absolute;
+    bottom: 0;
+    width: 17vw;
+    left: 2vw;
+    transform: translate(0, -100vw);
+    animation: slideUpThenSlideDown $duration2 linear 1 alternate paused forwards;
+    @include animation-delay(37);
+    .cls-1 {
+      stroke: #323232;
+    }
+    .cls-2 {
+      fill: #323232;
+      stroke: #323232;
     }
   }
 }
 #want_2 .container {
-  @include section_cont(37);
-  .h2, .h3, .big_txt, .span {color: $want;}
+  @include section_cont(38);
+  .h2,
+  .h3,
+  .big_txt,
+  .span {
+    color: $want;
+  }
   .h3 {
     width: 70vw;
     margin-left: 5vw;
@@ -970,107 +1118,113 @@ section {
   .h3 {
     transform: translate(0, -100vw);
     animation: slideDownThenSlideUp $duration2 linear 1 alternate paused forwards;
-    @include animation-delay(37);
+    @include animation-delay(38);
   }
   .p.a {
     transform: translate(100vw);
     animation: slideRightThenSlideLeft $duration2 linear 1 alternate paused forwards;
-    @include animation-delay(37);
+    @include animation-delay(38);
   }
   .p.b {
     transform: translate(100vw);
     animation: slideLeftThenSlideRight $duration2 linear 1 alternate paused forwards;
-    @include animation-delay(37);
+    @include animation-delay(38);
   }
   .span {
     font-family: "Delius", cursive;
     font-size: 5vw;
     transform: translate(0, -100vw);
     animation: slideUpThenSlideDown $duration2 linear 1 alternate paused forwards;
-    @include animation-delay(37);
+    @include animation-delay(38);
   }
 }
 #want_3.backup .container {
-  @include section_cont(38);
+  @include section_cont(39);
   display: grid;
   grid-template-columns: repeat(5, 20vw);
   grid-template-rows: repeat(2, 50vh);
-  .upLeft, .downRight {
+  .upLeft,
+  .downRight {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
-  .downLeft, .upRight {
+  .downLeft,
+  .upRight {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
-  .upLeft{
+  .upLeft {
     transform: translate(0, -100vw);
     animation: slideDownThenSlideUp $duration2 linear 1 alternate paused forwards;
-    @include animation-delay(38);
+    @include animation-delay(39);
     grid-area: 1 / 1 / span 1 / span 3;
   }
-  .upRight{
+  .upRight {
     transform: translate(100vw);
     animation: slideLeftThenSlideRight $duration2 linear 1 alternate paused forwards;
-    @include animation-delay(38);
+    @include animation-delay(39);
     grid-area: 1 / 4 / span 1 / span 2;
   }
-  .downLeft{
+  .downLeft {
     transform: translate(100vw);
     animation: slideRightThenSlideLeft $duration2 linear 1 alternate paused forwards;
-    @include animation-delay(38);
+    @include animation-delay(39);
     grid-area: 2 / 1 / span 1 / span 2;
   }
-  .downRight{
+  .downRight {
     transform: translate(0, -100vw);
     animation: slideUpThenSlideDown $duration2 linear 1 alternate paused forwards;
-    @include animation-delay(38);
+    @include animation-delay(39);
     grid-area: 2 / 3 / span 1 / span 3;
   }
 }
 #want_3.backup .container {
-  @include section_cont(38);
+  @include section_cont(39);
   display: grid;
   grid-template-columns: repeat(5, 20vw);
   grid-template-rows: repeat(2, 50vh);
-  .upLeft, .downRight {
+  .upLeft,
+  .downRight {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
-  .downLeft, .upRight {
+  .downLeft,
+  .upRight {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
-  .upLeft{
+  .upLeft {
     grid-area: 1 / 1 / span 1 / span 3;
   }
-  .upRight{
+  .upRight {
     grid-area: 1 / 4 / span 1 / span 2;
   }
-  .downLeft{
+  .downLeft {
     grid-area: 2 / 1 / span 1 / span 2;
   }
-  .downRight{
+  .downRight {
     grid-area: 2 / 3 / span 1 / span 3;
   }
   .img {
     transform: scale(-180deg);
     animation: spin $duration1 linear 1 alternate paused forwards;
-    @include animation-delay(38);
+    @include animation-delay(39);
   }
 }
 #want_3 .container {
-  @include section_cont(38);
+  @include section_cont(39);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   align-content: center;
   .img {
-    width: 20vw;
+    @media screen and (min-width: 1200px) {
+      width: 19.8vw;
+    }
     @media screen and (max-width: 1200px) {
       width: 25vw;
     }
@@ -1079,7 +1233,7 @@ section {
     }
     transform: scale(-180deg);
     animation: spin $duration1 linear 1 alternate paused forwards;
-    @include animation-delay(38);
+    @include animation-delay(39);
   }
 }
 
@@ -1149,17 +1303,18 @@ section {
 @keyframes fadeSlideThenFade {
   0% {
     opacity: 0;
+    transform: var(--moreTransform);
   }
   50% {
-    transform: translate(var(--translate));
+    transform: translate(var(--translate)) var(--moreTransform);
     opacity: 1;
   }
   99% {
-    transform: translate(var(--translate));
+    transform: translate(var(--translate)) var(--moreTransform);
     opacity: 0;
   }
   100% {
-    transform: translate(var(--translate));
+    transform: translate(var(--translate)) var(--moreTransform);
     opacity: 0;
   }
 }
@@ -1201,6 +1356,20 @@ section {
   100% {
     opacity: 0;
     transform: translate(0, 40vh);
+  }
+}
+@keyframes fadeSlideUpThenFadeSlideDownEmoji {
+  0% {
+    opacity: 0;
+    transform: translate(0, 40vh) rotate(20deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0) rotate(20deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 40vh) rotate(20deg);
   }
 }
 @keyframes fadeSlideVertThenFade {
@@ -1259,6 +1428,19 @@ section {
     transform: scale(0);
   }
 }
+@keyframes bounceThenUnbounceEmoji {
+  0%,
+  25% {
+    transform: scale(0) rotate(20deg);
+  }
+  50% {
+    transform: scale(1) rotate(20deg);
+  }
+  75%,
+  100% {
+    transform: scale(0) rotate(20deg);
+  }
+}
 
 @keyframes runLeftThenRunLeft {
   20% {
@@ -1307,6 +1489,22 @@ section {
     opacity: 0;
   }
 }
+@keyframes beatThenFadeEmoji {
+  25% {
+    transform: scale(0) rotate(20deg);
+  }
+  45% {
+    transform: scale(1.3) rotate(20deg);
+  }
+  50% {
+    transform: scale(1) rotate(20deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.5) rotate(20deg);
+    opacity: 0;
+  }
+}
 
 @keyframes dezoomThenDezoom {
   0% {
@@ -1333,6 +1531,31 @@ section {
     opacity: 1;
   }
 }
+@keyframes dezoomThenDezoomEmoji {
+  0% {
+    transform: scale(100) rotate(20deg);
+    opacity: 0;
+  }
+  15% {
+    transform: scale(100) rotate(20deg);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1) rotate(20deg);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(0) rotate(20deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) rotate(20deg);
+    opacity: 1;
+  }
+}
 
 @keyframes displaysOnYourTurn {
   0% {
@@ -1351,7 +1574,8 @@ section {
   }
 }
 @keyframes displaysOnYourTurnHome {
-  0%, 10% {
+  0%,
+  10% {
     visibility: visible;
     z-index: 3;
   }
@@ -1361,31 +1585,80 @@ section {
 }
 
 @keyframes bg-color {
-  0% { background-color: white; }
-  2.63% { background-color: $affraid; }
-  5.26% { background-color: white; }
-  7.89%, 10.52% { background-color: $affraid; }
-  13.15% { background-color: white; }
-  15.78% { background-color: $affraid; }
-  17.94% { background-color: $wow; }
-  21.05% { background-color: white;}
-  23.68%, 26.31% { background-color: $wow; }
-  28.94% { background-color: $bored; }
-  31.57%, 34.21% { background-color: white;}
-  36.84%, 47.36% {background-color: $bored;}
-  50%, 52.63% { background-color: $happy;}
-  55.26%, 57.89% { background-color: white;}
-  60.52%, 65.78% { background-color: $love;}
-  68.42%, 73.68% { background-color: $grumpy;}
-  76.31%, 84.21% { background-color: white;}
-  86.84% { background-color: $cry;}
-  89.47%, 92.1% { background-color: white;}
-  94.73% { background-color: $want;}
-  97.36%, 100% { background-color: white; }
-}
-
-::-webkit-scrollbar {
-  display: none;
+  0% {
+    background-color: white;
+  }
+  2.63% {
+    background-color: $affraid;
+  }
+  5.26% {
+    background-color: white;
+  }
+  7.89%,
+  10.52% {
+    background-color: $affraid;
+  }
+  13.15% {
+    background-color: white;
+  }
+  15.78% {
+    background-color: $affraid;
+  }
+  17.94% {
+    background-color: $wow;
+  }
+  21.05% {
+    background-color: white;
+  }
+  23.68%,
+  26.31% {
+    background-color: $wow;
+  }
+  28.94% {
+    background-color: $bored;
+  }
+  31.57%,
+  34.21% {
+    background-color: white;
+  }
+  36.84%,
+  47.36% {
+    background-color: $bored;
+  }
+  50%,
+  52.63% {
+    background-color: $happy;
+  }
+  55.26%,
+  57.89% {
+    background-color: white;
+  }
+  60.52%,
+  65.78% {
+    background-color: $love;
+  }
+  68.42%,
+  73.68% {
+    background-color: $grumpy;
+  }
+  76.31%,
+  84.21% {
+    background-color: white;
+  }
+  86.84% {
+    background-color: $cry;
+  }
+  89.47%,
+  92.1% {
+    background-color: white;
+  }
+  94.73% {
+    background-color: $want;
+  }
+  97.36%,
+  100% {
+    background-color: white;
+  }
 }
 
 //nav
