@@ -1608,6 +1608,22 @@ $root: ".c-rainbow";
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
+.angry {
+  display: inline-block;
+}
+.angry {
+  display: block;
+  position: relative;
+}
+.angry:hover,
+.angry:focus {
+  cursor: default;
+  animation-name: spaceboots;
+  animation-duration: 0.3s;
+  transform-origin: 50% 50%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
 .active {
   filter: (invert(100%));
 }
