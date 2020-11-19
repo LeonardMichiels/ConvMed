@@ -1599,6 +1599,131 @@ $root: ".c-rainbow";
     transform: translate(1px, -2px) rotate(-1deg);
   }
 }
+.dropCont {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  background: -webkit-linear-gradient(top, #003330 -100%, #999999 100%);
+    background: -moz-linear-gradient(top, #003330 -100%, #999999 100%);
+    background: -linear-gradient(top, #003330 -100%, #999999 100%);
+}
+
+.drop {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 0 30px 30px 30px;
+  background-color: #4488cc;
+}
+
+.one {
+  -webkit-transform: scale(0.8) rotate(45deg) translate(10px, 0);
+  -webkit-animation: movedropslinear 10s linear infinite;
+  -moz-transform: scale(0.8) rotate(45deg) translate(10px, 0);
+  -moz-animation: movedropslinear 10s linear infinite;
+  opacity: .8;
+}
+
+.two {
+  -webkit-transform: scale(0.4) rotate(45deg) translate(300px, -200px);	
+  -webkit-animation: movedropsbroken 10s linear infinite;
+  -moz-transform: scale(0.4) rotate(45deg) translate(300px, -200px);	
+  -moz-animation: movedropsbroken 10s linear infinite;
+  opacity: .4;
+}
+
+.three {
+  -webkit-transform: scale(1.5) rotate(45deg) translate(225px, -200px);
+  -webkit-animation: movedropslinear 20s linear infinite;
+  -moz-transform: scale(0.6) rotate(45deg) translate(100px, -80px);
+  -moz-animation: movedropsbroken 20s linear infinite;
+  opacity: .95;
+}
+
+.four {
+  -webkit-transform: scale(0.6) rotate(45deg) translate(100px, -80px);
+  -webkit-animation: movedropsbroken 20s linear infinite;
+  -moz-transform: scale(0.6) rotate(45deg) translate(100px, -80px);
+  -moz-animation: movedropsbroken 20s linear infinite;
+  opacity: .6;
+}
+
+.five {
+  -webkit-transform: scale(1.0) rotate(45deg) translate(200px, -200px);
+  -webkit-animation: movedropsbroken 15s linear infinite;
+  -moz-transform: scale(0.6) rotate(45deg) translate(100px, -80px);
+  -moz-animation: movedropsbroken 20s linear infinite;
+  opacity: .2;
+}
+
+.d6 {
+  -webkit-transform: scale(0.8) rotate(45deg) translate(50px, -300px);
+  -webkit-animation: movedropslinear 10s linear infinite;
+  -moz-transform: scale(0.6) rotate(45deg) translate(100px, -80px);
+  -moz-animation: movedropsbroken 20s linear infinite;
+  opacity: .76;
+}
+
+.d7 {
+  -webkit-transform: scale(0.4) rotate(45deg) translate(400px, -400px);	
+  -webkit-animation: movedropsbroken 10s linear infinite;
+  -moz-transform: scale(0.6) rotate(45deg) translate(100px, -80px);
+  -moz-animation: movedropsbroken 20s linear infinite;
+  opacity: .8;
+}
+
+.d8 {
+  -webkit-transform: scale(1.5) rotate(45deg) translate(30px, -350px);
+  -webkit-animation: movedropslinear 20s linear infinite;
+  -moz-transform: scale(0.6) rotate(45deg) translate(100px, -80px);
+  -moz-animation: movedropsbroken 20s linear infinite;
+  opacity: .9;
+}
+
+.d9 {
+  -webkit-transform: scale(0.6) rotate(45deg) translate(50px, -500px);
+  -webkit-animation: movedropsbroken 20s linear infinite;
+  -moz-transform: scale(0.6) rotate(45deg) translate(100px, -80px);
+  -moz-animation: movedropsbroken 20s linear infinite;
+  opacity: .6;
+}
+
+.d10 {
+  -webkit-transform: scale(1.0) rotate(45deg) translate(20px, -200px);
+  -webkit-animation: movedropsbroken 15s linear infinite;
+  -moz-transform: scale(0.6) rotate(45deg) translate(100px, -80px);
+  -moz-animation: movedropsbroken 20s linear infinite;
+  opacity: .4;
+}
+
+
+@-webkit-keyframes movedropslinear {
+  0% {margin-top: 0%;}
+  100% {margin-top: 100%;}
+}
+
+@-moz-keyframes movedropslinear {
+  0% {margin-top: 0%;}
+  100% {margin-top: 100%;}
+}
+
+@-webkit-keyframes movedropsbroken {
+  0% {margin-top: 0%;}
+  25% {margin-top: 45%;}
+  50% {margin-top: 60%; }
+  75% {margin-top: 95%;}
+  100% {margin-top: 100%; }
+}
+
+@-moz-keyframes movedropsbroken {
+  0% {margin-top: 0%;}
+  25% {margin-top: 45%;}
+  50% {margin-top: 60%; }
+  75% {margin-top: 95%;}
+  100% {margin-top: 100%; }
+}
 .shake:hover,
 .shake:focus {
   cursor: default;
